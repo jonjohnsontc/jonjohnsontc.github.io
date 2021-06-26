@@ -17,13 +17,13 @@ export default function Panel(props) {
             <nav className={`navbar`} role="navigation" aria-label="main-navigation">
                 <div className={`navbar-brand`}>
                     <div className={`columns is-narrow`}>
-                        <div className={`column is-half is-offset-1`}>
-                            <HomeLink name="Jon Johnson" link="/" />
+                        <div className={`column is-half`}>
+                            <HomeLink name="JJ" link="/" />
                         </div>
                         <div className={`column is-2 is-flex`}>
                             <HomeLink name="About" link="/about" />
-                            <HomeLink name="Blog" />
-                            <HomeLink name="Stuff" />
+                            <HomeLink name="Blog" link="/blog" />
+                            <HomeLink name="Stuff" link="/stuff" />
                         </div>
                     </div>
                 </div>
