@@ -1,0 +1,49 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+// Global vars
+// Bulma colors 
+$white-ter: #fbf1c7;
+$white: #f9f5d7;
+$turquoise: #458588;
+$green: #98971a;
+$grey-darker: #504945;
+$cyan: #076678;
+$yellow: #d79921;
+$purple: #b16286;
+$red: #cc241d;
+$grey-dark: hsl(0, 0%, 29%);
+
+$navbar-background-color: $grey-darker;
+$link: #d3869b;
+$link-hover: $white;
+$link-active: $white;
+
+// Fonts
+$family-serif: 'Ubuntu Mono', monospace;
+
+.app {
+    background-color: $white-ter;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.navbar .navbar-brand {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+  
+.navbar .navbar-brand > .navbar-item,
+.navbar .navbar-brand .navbar-link {
+    display: flex;
+  }
+
+.link-section {
+    display: inline-flex;   
+}
+
+
+@import "/Users/jonjohnson/dev/bulma/bulma.sass";
+
