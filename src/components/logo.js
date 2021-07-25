@@ -1,27 +1,28 @@
 import React from "react"
 
 export default function Logo(props) {
-    let colors = [
-        "#EB5757",
-        "#F2C94C",
-        "#27AE60",
-        "#6FCF97",
-        "#2D9CDB",
-        "#56CCF2",
-        "#A041FF",
-        "#F2994A",
-        "#BDBDBD",
-        "#4F4F4F"
-    ];
+  let colors = [
+    "#EB5757",
+    "#F2C94C",
+    "#27AE60",
+    "#6FCF97",
+    "#2D9CDB",
+    "#56CCF2",
+    "#A041FF",
+    "#F2994A",
+    "#BDBDBD",
+    "#4F4F4F"
+  ];
 
-    let color1 = colors[Math.floor(Math.random() * colors.length)] || "#A041FF";
-    let color2 = colors[Math.floor(Math.random() * colors.length)] || "#F2994A";
+  let color1 = colors[Math.floor(Math.random() * colors.length)] || "#A041FF";
+  let color2 = colors[Math.floor(Math.random() * colors.length)] || "#F2994A";
 
-    let width = props.width || "209"
-    let height = props.height || "209"
-    
-    return (
-    <svg
+  let width = props.width || "209"
+  let height = props.height || "209"
+
+  return (
+    <button id="jj">
+      <svg className="logo"
         xmlns="http://www.w3.org/2000/svg"
         width={width}
         height={height}
@@ -76,5 +77,6 @@ export default function Logo(props) {
           </linearGradient>
         </defs>
       </svg>
-    );
-  }
+    </button>
+  );
+}

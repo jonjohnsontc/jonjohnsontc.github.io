@@ -14,13 +14,16 @@ $purple: #b16286;
 $red: #cc241d;
 $grey-dark: hsl(0, 0%, 29%);
 
+$container-max-width: 800px;
 $navbar-background-color: $grey-darker;
 $link: #d3869b;
-$link-hover: $white;
-$link-active: $white;
+$link-hover: $red;
+$link-active: $red;
 
 // Fonts
 $family-serif: 'Ubuntu Mono', monospace;
+$family-primary: 'Ubuntu Mono', monospace;
+// $family-secondary: ;
 
 .app {
     background-color: $white-ter;
@@ -29,21 +32,37 @@ $family-serif: 'Ubuntu Mono', monospace;
     overflow-y: auto;
 }
 
-.navbar .navbar-brand {
-    text-align: center;
-    display: inline-block;
-    width: 100%;
+#nav {
+  background-color: $grey-darker;
+  height: 4rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  .nav-item {
+    display: inline;
+    font-size: 2rem;
+    .nav-link {
+      display: inline-block;
+      padding: 10px;
+      &:hover{
+        text-decoration: underline 3px;
+      }
+    }
   }
-  
-.navbar .navbar-brand > .navbar-item,
-.navbar .navbar-brand .navbar-link {
-    display: flex;
-  }
-
-.link-section {
-    display: inline-flex;   
 }
 
+#jj {
+  display: inline-block;
+  background-color: transparent;
+  // &:active {
+
+  // }
+}
+
+.sad-face {
+  font-size: 10rem;
+}
 
 @import "/Users/jonjohnson/dev/bulma/bulma.sass";
 
