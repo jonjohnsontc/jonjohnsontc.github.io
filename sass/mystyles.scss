@@ -13,9 +13,9 @@ $yellow: #d79921;
 $purple: #b16286;
 $red: #cc241d;
 $grey-dark: hsl(0, 0%, 29%);
+$navbar-background-color: $grey-darker;
 
 $container-max-width: 800px;
-$navbar-background-color: $grey-darker;
 $link: #d3869b;
 $link-hover: $red;
 $link-active: $red;
@@ -64,6 +64,7 @@ $family-primary: 'Ubuntu Mono', monospace;
 
 .jj-pic {
   border-radius: 50%;
+  height: 400px;
 }
 
 @import "/Users/jonjohnson/dev/bulma/bulma.sass";
