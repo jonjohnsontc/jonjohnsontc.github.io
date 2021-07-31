@@ -23,7 +23,6 @@ $link-active: $red;
 // Fonts
 $family-serif: 'Ubuntu Mono', monospace;
 $family-primary: 'Ubuntu Mono', monospace;
-// $family-secondary: ;
 
 .app {
     background-color: $white-ter;
@@ -55,13 +54,16 @@ $family-primary: 'Ubuntu Mono', monospace;
 #jj {
   display: inline-block;
   background-color: transparent;
-  // &:active {
-
-  // }
+  border-radius: 50%;
+  border: none;
 }
 
 .sad-face {
   font-size: 10rem;
+}
+
+.jj-pic {
+  border-radius: 50%;
 }
 
 @import "/Users/jonjohnson/dev/bulma/bulma.sass";

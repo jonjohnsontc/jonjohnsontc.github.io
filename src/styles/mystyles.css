@@ -30,10 +30,16 @@
 #jj {
   display: inline-block;
   background-color: transparent;
+  border-radius: 50%;
+  border: none;
 }
 
 .sad-face {
   font-size: 10rem;
+}
+
+.jj-pic {
+  border-radius: 50%;
 }
 
 /*! bulma.io v0.9.2 | MIT License | github.com/jgthms/bulma */
