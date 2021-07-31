@@ -9,7 +9,7 @@ function HomeLink(props) {
   )
 }
 
-function NavLinks(props) {
+function NavLinks() {
   return (
     <ul id="nav">
       <li className="nav-item">

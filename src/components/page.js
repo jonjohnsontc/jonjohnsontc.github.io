@@ -1,8 +1,6 @@
 import React from "react"
 
 export function Splash(props) {
-  let colo
-
   return (
     <div className={`hero`}>
       <div className={`hero-body`}>

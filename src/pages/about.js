@@ -1,5 +1,4 @@
 import React from "react"
-import { Splash } from "../components/page"
 import myPic from "../../static/jj_profile_square.jpg"
 
 // TODO: There's got to be a better way to center the
@@ -25,6 +24,21 @@ function AboutHeadline(props) {
   )
 }
 
+function SimpleHeadline(props) {
+  return (
+    <div>
+      {/* <hr /> */}
+      <div className={`headline`}>
+        <div>
+          {props.logo}
+        </div>
+        <div className={`pl-2`}>{props.prompt}</div>
+      </div>
+      {props.belowHeadline}
+    </div>
+  )
+}
+
 function AboutMe() {
   const statLine = (
     <article className={`ml-2`}>
@@ -37,8 +51,7 @@ function AboutMe() {
         <li className={`has-text-weight-bold`}>Dependents:</li>
         <li className={`pb-2`}>Two Cats</li>
         <li className={`py-2`}>
-          {" "}
-          <a href="mailto:jonjohnsontc@live.com">Get in touch!👋🏽</a>
+          <a href="mailto:jonjohnsontc@live.com">Get in touch! 👋🏽</a>
         </li>
       </ul>
     </article>
@@ -65,7 +78,7 @@ function AboutMe() {
     </article>
   )
   return (
-    <AboutHeadline
+    <SimpleHeadline
       logo={<img src={myPic} className={`jj-pic`}></img>}
       prompt={statLine}
       belowHeadline={selectBio}
