@@ -51,6 +51,14 @@
   align-items: center;
 }
 
+.blog {
+  border-bottom: 1px solid #504945;
+}
+
+.blog-list-box {
+  border-top: 1px solid #504945;
+}
+
 /*! bulma.io v0.9.2 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .pagination-previous,

@@ -45,7 +45,7 @@ $family-primary: 'Ubuntu Mono', monospace;
     .nav-link {
       display: inline-block;
       padding: 10px;
-      &:hover{
+      &:hover {
         text-decoration: underline 3px;
       }
     }
@@ -73,6 +73,14 @@ $family-primary: 'Ubuntu Mono', monospace;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.blog {
+  border-bottom: 1px solid $grey-darker;
+}
+
+.blog-list-box {
+  border-top: 1px solid $grey-darker;
 }
 
 @import "/Users/jonjohnson/dev/bulma/bulma.sass";

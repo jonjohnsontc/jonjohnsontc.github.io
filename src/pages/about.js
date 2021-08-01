@@ -1,33 +1,9 @@
 import React from "react"
 import myPic from "../../static/jj_profile_square.jpg"
 
-// TODO: There's got to be a better way to center the
-//       logo and prompt
-function AboutHeadline(props) {
-  return (
-    <div>
-      <hr />
-      <div className={`pt-2 columns is-centered is-vcentered`}>
-        <div className={`column`}></div>
-        <div className={`column`}></div>
-        <div className={`column`}></div>
-        <div className={`column`}></div>
-        {props.logo}
-        <div className={`column`}>{props.prompt}</div>
-        <div className={`column`}></div>
-        <div className={`column`}></div>
-        <div className={`column`}></div>
-        <div className={`column`}></div>
-      </div>
-      {props.belowHeadline}
-    </div>
-  )
-}
-
 function SimpleHeadline(props) {
   return (
     <div>
-      {/* <hr /> */}
       <div className={`headline`}>
         <div>
           {props.logo}
