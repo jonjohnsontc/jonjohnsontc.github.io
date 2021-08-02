@@ -1,22 +1,33 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark } = data; 
+  const { frontmatter, html } = markdownRemark;
+
+  const title = frontmatter.title.split(" ");
+
+  console.log(title);
+
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        {/* <h1>{frontmatter.title}</h1> */}
-        {/* <h2>{frontmatter.date}</h2> */}
-        <div
-          className={`blog-post-content container`}
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+    <div className={`blog-post-container container`}>
+      <div className={`blog-post hero is-medium has-background-grey-darker`}>
+        {/* We render a blank hero-body, and hero-foot with text to 
+        give the title at bottom look */}
+        <div className={`hero-body`}></div>
+        <div className={`hero-foot`}>
+          <p className={`title is-size-1 is-inline has-text-white`}>{frontmatter.title}</p>
+          <p className={`pl-6 subtitle is-inline has-text-white`}>{frontmatter.date}</p>
+        </div>
       </div>
+
+      <div
+        className={`blog-post-content mt-6`}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </div>
-  )
+  );
 }
 export const pageQuery = graphql`
   query($id: String!) {
@@ -29,4 +40,4 @@ export const pageQuery = graphql`
       }
     }
   }
-  `
+`;
