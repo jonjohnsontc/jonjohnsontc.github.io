@@ -46,17 +46,19 @@ export default function Blog({ data }) {
     );
   }
 
+  posts.reverse()
+
   return (
     <div className={`container blog`}>
       <div>Total posts {nodes.length}</div>
-      {/* {posts} */}
-      {nodes.map(node => (
+      {posts}
+      {/* {nodes.map(node => (
         <BlogListItem
           title={node.frontmatter.title}
           date={node.frontmatter.date}
           link={node.frontmatter.slug}
         />
-      ))}
+      ))} */}
     </div>
   );
 }
