@@ -6,10 +6,6 @@ export default function Template({
   const { markdownRemark } = data; 
   const { frontmatter, html } = markdownRemark;
 
-  const title = frontmatter.title.split(" ");
-
-  console.log(title);
-
   return (
     <div className={`blog-post-container container`}>
       <div className={`blog-post hero is-medium has-background-grey-darker`}>
@@ -17,14 +13,14 @@ export default function Template({
         give the title at bottom look */}
         <div className={`hero-body`}></div>
         <div className={`hero-foot`}>
-          <p className={`title is-size-1 is-inline has-text-white`}>{frontmatter.title}</p>
+          <p className={`title is-size-1 is-inline has-text-white is-family-sans-serif`}>{frontmatter.title}</p>
           <p className={`pl-6 subtitle is-inline has-text-white`}>{frontmatter.date}</p>
         </div>
       </div>
 
       <div
         className={`blog-post-content mt-6`}
-        dangerouslySetInnerHTML={{ __html: html }}
+        dangerouslySetInn erHTML={{ __html: html }}
       />
     </div>
   );

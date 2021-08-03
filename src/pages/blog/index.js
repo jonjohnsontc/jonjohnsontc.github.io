@@ -30,7 +30,6 @@ export const blogQuery = graphql`
 `;
 
 export default function Blog({ data }) {
-  // TODO: I want to grab all post titles, slugs, and dates in src/markdown-pages
   const { allMarkdownRemark } = data;
   const { nodes } = allMarkdownRemark;
 
@@ -47,12 +46,17 @@ export default function Blog({ data }) {
     );
   }
 
-  const blogLog = console.log(posts.length);
-
   return (
     <div className={`container blog`}>
       <div>Total posts {nodes.length}</div>
-      {posts}
+      {/* {posts} */}
+      {nodes.map(node => (
+        <BlogListItem
+          title={node.frontmatter.title}
+          date={node.frontmatter.date}
+          link={node.frontmatter.slug}
+        />
+      ))}
     </div>
   );
 }
