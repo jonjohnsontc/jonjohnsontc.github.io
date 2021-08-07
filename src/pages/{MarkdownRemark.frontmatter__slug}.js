@@ -1,9 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data; 
+export default function Template({ data }) {
+  const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
   return (
@@ -13,14 +11,20 @@ export default function Template({
         give the title at bottom look */}
         <div className={`hero-body`}></div>
         <div className={`hero-foot`}>
-          <p className={`title is-size-1 is-inline has-text-white is-family-sans-serif`}>{frontmatter.title}</p>
-          <p className={`pl-6 subtitle is-inline has-text-white`}>{frontmatter.date}</p>
+          <p
+            className={`title is-size-1 is-inline has-text-white is-family-sans-serif`}
+          >
+            {frontmatter.title}
+          </p>
+          <p className={`pl-6 subtitle is-inline has-text-white`}>
+            {frontmatter.date}
+          </p>
         </div>
       </div>
 
       <div
         className={`blog-post-content mt-6`}
-        dangerouslySetInn erHTML={{ __html: html }}
+        dangerouslySetInnerHTML={{ __html: html }}
       />
     </div>
   );

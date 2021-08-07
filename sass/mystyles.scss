@@ -37,7 +37,7 @@ $family-primary: 'Ubuntu Mono', monospace;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  // margin-bottom: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   .nav-item {
     display: inline;
@@ -63,6 +63,10 @@ $family-primary: 'Ubuntu Mono', monospace;
   font-size: 10rem;
 }
 
+//////////////////////////
+// About page elements //
+/////////////////////////
+
 .jj-pic {
   border-radius: 50%;
   height: 400px;
@@ -75,12 +79,28 @@ $family-primary: 'Ubuntu Mono', monospace;
   align-items: center;
 }
 
+//////////////////////////
+// blog page elements //
+/////////////////////////
+
 .blog {
   border-bottom: 1px solid $grey-darker;
 }
 
 .blog-list-box {
   border-top: 1px solid $grey-darker;
+}
+
+//////////////////////////
+// stuff page elements //
+/////////////////////////
+
+.stuff-button {
+  background-color: transparent;
+  border: none;
+  &:disabled {
+    opacity: 50%;
+  }
 }
 
 @import "/Users/jonjohnson/dev/bulma/bulma.sass";

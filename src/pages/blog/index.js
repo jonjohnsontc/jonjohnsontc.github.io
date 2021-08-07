@@ -33,32 +33,20 @@ export default function Blog({ data }) {
   const { allMarkdownRemark } = data;
   const { nodes } = allMarkdownRemark;
 
-  let posts = [];
-
-  for (let index = 0; index < nodes.length; index++) {
-    const post = nodes[index];
-    posts.push(
-      <BlogListItem
-        title={post.frontmatter.title}
-        date={post.frontmatter.date}
-        link={post.frontmatter.slug}
-      />
-    );
-  }
-
-  posts.reverse()
+  // Sorting nodes by date
+  // TODO: push this to graphql if you use mdx
+  nodes.sort((a, b) => (a.frontmatter.date < b.frontmatter.date ? 1 : -1));
 
   return (
     <div className={`container blog`}>
-      <div>Total posts {nodes.length}</div>
-      {posts}
-      {/* {nodes.map(node => (
+      {nodes.map(node => (
         <BlogListItem
+          key={node.frontmatter.slug}
           title={node.frontmatter.title}
           date={node.frontmatter.date}
           link={node.frontmatter.slug}
         />
-      ))} */}
+      ))}
     </div>
   );
 }
