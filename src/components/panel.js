@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
 
 function HomeLink(props) {
+  // Checking for SSR
+  let current;
+  if (typeof window !== "undefined") {
+    current = window.location.pathname;
+  }
+
   return (
-    <Link to={props.link} className="nav-link">
+    <Link
+      to={props.link}
+      className={current === props.link ? "nav-active-link" : "nav-link"}
+    >
       {props.name}
     </Link>
   );

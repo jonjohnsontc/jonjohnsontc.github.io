@@ -38,16 +38,12 @@ export default function Stuff({ data }) {
 
   const [idx, setIdx] = useState(0);
 
-  const gotoIdx = index => {
-    setIdx(index);
-  };
-
   // used to represent each `stuff` entry above the carousel
   const Dot = props => (
     <button
       onClick={props.onClick}
       className={`dot is-inline-flex mr-2`}
-      key={Math.random()}
+      key={props.key}
       disabled={props.disabled === true ? true : null}
     >
       {/* I think I can leverage a span within the button to add an icon
@@ -61,19 +57,33 @@ export default function Stuff({ data }) {
       if (index === idx) {
         dotArray[index] = Dot({
           disabled: true,
-          onClick: () => gotoIdx(index),
+          onClick: () => setIdx(index),
+          key: index,
         });
       } else {
         dotArray[index] = Dot({
           disabled: false,
-          onClick: () => gotoIdx(index),
+          onClick: () => setIdx(index),
+          key: index,
         });
       }
     }
-    return dotArray;
+    return (
+      // For whatever reason, applying Bulma styles via classNames wasn't working
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "2rem",
+        }}
+      >
+        {dotArray}
+      </div>
+    );
   };
 
-  return (
+  // This 
+  const allTheStuff = (
     <>
       <div className={`columns is-centered is-vcentered mt-6`}>
         <div className={`column is-flex is-justify-content-flex-end`}>
@@ -107,4 +117,46 @@ export default function Stuff({ data }) {
       </div>
     </>
   );
+  
+  if (typeof window !== "undefined") {
+    if (window.innerWidth <= 800) {
+      console.log(window.innerWidth);
+      return (
+        <>
+          <div className={`columns is-centered is-vcentered mt-6`}>
+            <div className={`column is-half`}>
+              <Dots />
+              <h1 className={`title has-text-centered is-family-sans-serif`}>
+                {nodes[idx].frontmatter.title}
+              </h1>
+              <Carousel
+                pic={nodes[idx].frontmatter.pic}
+                content={nodes[idx].html}
+              />
+            </div>
+            <div className={`column is-flex is-justify-content-center`}>
+              <button
+                disabled={idx === 0 ? true : null}
+                onClick={() => setIdx(idx - 1)}
+                className={`stuff-button is-size-1`}
+              >
+                &lt; {/* Less than sign */}
+              </button>
+              <button
+                disabled={idx === nodes.length - 1 ? true : null}
+                onClick={() => setIdx(idx + 1)}
+                className={`stuff-button is-size-1`}
+              >
+                &gt; {/* Greater than sign */}
+              </button>
+            </div>
+          </div>
+        </>
+      );
+    }
+  } else {
+    return allTheStuff;
+  }
+
+  return allTheStuff;
 }

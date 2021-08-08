@@ -26,6 +26,17 @@
 #nav .nav-item .nav-link:hover {
   text-decoration: underline 3px;
 }
+#nav .nav-item .nav-active-link {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: underline 3px;
+  color: #cc241d;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+}
 
 #jj {
   display: inline-block;

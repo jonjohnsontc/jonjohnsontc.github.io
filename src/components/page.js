@@ -15,7 +15,3 @@ export function Splash(props) {
     </div>
   )
 }
-
-export function Headline() {
-  
-}
