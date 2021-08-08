@@ -37,7 +37,6 @@ $family-primary: 'Ubuntu Mono', monospace;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 2rem;
   text-align: center;
   .nav-item {
     display: inline;
@@ -101,6 +100,23 @@ $family-primary: 'Ubuntu Mono', monospace;
   &:disabled {
     opacity: 50%;
   }
+}
+
+.dot {
+  background-color: $grey-darker;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  border: none;
+  opacity: 50%;
+  &:disabled{
+    opacity: 100%;
+  } 
+}
+
+.stuff-image {
+  border-bottom: 3px dotted $grey-darker;
+
 }
 
 @import "/Users/jonjohnson/dev/bulma/bulma.sass";

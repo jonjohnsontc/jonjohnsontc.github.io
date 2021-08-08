@@ -17,7 +17,7 @@ function BlogListItem(props) {
 
 export const blogQuery = graphql`
   query MyQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: { frontmatter: { slug: { ne: "/stuff/" } } }) {
       nodes {
         frontmatter {
           title
@@ -38,7 +38,7 @@ export default function Blog({ data }) {
   nodes.sort((a, b) => (a.frontmatter.date < b.frontmatter.date ? 1 : -1));
 
   return (
-    <div className={`container blog`}>
+    <div className={`container blog mt-6`}>
       {nodes.map(node => (
         <BlogListItem
           key={node.frontmatter.slug}

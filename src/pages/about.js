@@ -55,7 +55,7 @@ function AboutMe() {
   )
   return (
     <SimpleHeadline
-      logo={<img src={myPic} className={`jj-pic`}></img>}
+      logo={<img src={myPic} className={`jj-pic mt-6`}></img>}
       prompt={statLine}
       belowHeadline={selectBio}
     />

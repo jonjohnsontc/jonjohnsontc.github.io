@@ -2,7 +2,7 @@ import React from "react"
 
 export function Splash(props) {
   return (
-    <div className={`hero`}>
+    <div className={`hero mt-2`}>
       <div className={`hero-body`}>
         <div className={`container`}>
           <div className={`columns is-vcentered`}>
@@ -14,4 +14,8 @@ export function Splash(props) {
       </div>
     </div>
   )
+}
+
+export function Headline() {
+  
 }
