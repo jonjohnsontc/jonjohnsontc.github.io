@@ -72,18 +72,22 @@
 .stuff-button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .stuff-button:disabled {
   opacity: 50%;
 }
 
 .dot {
-  background-color: #504945;
-  border-radius: 50%;
-  height: 25px;
-  width: 25px;
   border: none;
   opacity: 50%;
+  cursor: pointer;
+}
+.dot.dot-background {
+  background-color: #504945;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
 .dot:disabled {
   opacity: 100%;

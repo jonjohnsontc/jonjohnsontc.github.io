@@ -5,7 +5,14 @@ function HomeLink(props) {
   // Checking for SSR
   let current;
   if (typeof window !== "undefined") {
-    current = window.location.pathname;
+    // If the pathname is greater than 5 characters it's likely
+    // a path within one of the top level links, so we
+    // regex match for the root path
+    if (window.location.pathname.length > 10) {
+      current = window.location.pathname.match(/(\/\w+)/)[0]
+    } else {
+      current = window.location.pathname
+    }
   }
 
   return (

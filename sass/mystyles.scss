@@ -1,8 +1,8 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
 // Global vars
-// Bulma colors 
+// Bulma colors
 $white-ter: #fbf1c7;
 $white: #f9f5d7;
 $turquoise: #458588;
@@ -21,14 +21,14 @@ $link-hover: $red;
 $link-active: $red;
 
 // Fonts
-$family-serif: 'Ubuntu Mono', monospace;
-$family-primary: 'Ubuntu Mono', monospace;
+$family-serif: "Ubuntu Mono", monospace;
+$family-primary: "Ubuntu Mono", monospace;
 
 .app {
-    background-color: $white-ter;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: auto;
+  background-color: $white-ter;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 #nav {
@@ -108,27 +108,29 @@ $family-primary: 'Ubuntu Mono', monospace;
 .stuff-button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
   &:disabled {
     opacity: 50%;
   }
 }
 
 .dot {
-  background-color: $grey-darker;
-  border-radius: 50%;
-  height: 25px;
-  width: 25px;
   border: none;
   opacity: 50%;
-  &:disabled{
+  cursor: pointer;
+  &.dot-background {
+    background-color: $grey-darker;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+  &:disabled {
     opacity: 100%;
-  } 
+  }
 }
 
 .stuff-image {
   border-bottom: 3px dotted $grey-darker;
-
 }
 
 @import "/Users/jonjohnson/dev/bulma/bulma.sass";
-

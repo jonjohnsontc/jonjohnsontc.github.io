@@ -21,7 +21,7 @@ function Carousel(props) {
     <>
       <div>
         <div className={`is-flex is-justify-content-center stuff-image`}>
-          <img src={props.pic} width="500px" />
+          <img src={props.pic} alt={props.title + " logo"} width="500px" />
         </div>
         <article
           className={`mt-6`}
@@ -39,17 +39,25 @@ export default function Stuff({ data }) {
   const [idx, setIdx] = useState(0);
 
   // used to represent each `stuff` entry above the carousel
-  const Dot = props => (
-    <button
-      onClick={props.onClick}
-      className={`dot is-inline-flex mr-2`}
-      key={props.key}
-      disabled={props.disabled === true ? true : null}
-    >
-      {/* I think I can leverage a span within the button to add an icon
-      <span></span> */}
-    </button>
-  );
+  const Dot = props => {
+    let classes = `dot is-inline-flex mr-2`
+    if (props.icon == null) {
+      classes += ` dot-background`
+    }
+    return (
+      <button
+        onClick={props.onClick}
+        className={classes}
+        key={props.key}
+        disabled={props.disabled === true ? true : null}
+      >
+        <span>
+          <img src={props.icon} alt={props.icon == null ? "" : props.title}/>
+        </span>
+      </button>
+    );
+  };
+
   const Dots = () => {
     const numDots = nodes.length;
     let dotArray = [];
@@ -82,7 +90,8 @@ export default function Stuff({ data }) {
     );
   };
 
-  // This 
+  // This is the standard layout for 'Stuff', it's used in SSR
+  // and layouts > 800px wide
   const allTheStuff = (
     <>
       <div className={`columns is-centered is-vcentered mt-6`}>
@@ -103,6 +112,7 @@ export default function Stuff({ data }) {
           <Carousel
             pic={nodes[idx].frontmatter.pic}
             content={nodes[idx].html}
+            title={nodes[idx].frontmatter.title}
           />
         </div>
         <div className={`column`}>
@@ -117,10 +127,13 @@ export default function Stuff({ data }) {
       </div>
     </>
   );
-  
+
   if (typeof window !== "undefined") {
+    // If the size of the display width is less than 800px
+    // we use the `mobile` version of the page, which moves the
+    // left arrow button underneath the Carousel so it's not
+    // on top of it.
     if (window.innerWidth <= 800) {
-      console.log(window.innerWidth);
       return (
         <>
           <div className={`columns is-centered is-vcentered mt-6`}>
