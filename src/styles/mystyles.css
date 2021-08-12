@@ -33,6 +33,12 @@
   color: #cc241d;
 }
 
+.nav-active-link {
+  text-underline-offset: 0.2em;
+  text-decoration: underline 3px;
+  color: #cc241d;
+}
+
 .nav-button {
   background-color: transparent;
   border: none;

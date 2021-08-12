@@ -14,6 +14,8 @@ $purple: #b16286;
 $red: #cc241d;
 $grey-dark: hsl(0, 0%, 29%);
 $navbar-background-color: $grey-darker;
+// $navbar-item-hover-background-color: $grey-darker;
+// $navbar-dropdown-background-color: $cyan;
 
 $container-max-width: 800px;
 $link: #d3869b;
@@ -55,6 +57,13 @@ $family-primary: "Ubuntu Mono", monospace;
       color: $red;
     }
   }
+}
+
+
+.nav-active-link {
+  text-underline-offset: 0.2em;
+  text-decoration: underline 3px;
+  color: $red;
 }
 
 .nav-button {
