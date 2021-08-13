@@ -18,49 +18,72 @@ function HomeLink(props) {
   return (
     <Link
       to={props.link}
-      className={current === props.link ? "is-size-2 nav-active-link" : "is-size-2 nav-link"}
+      className={
+        current === props.link
+          ? "is-size-2 nav-active-link"
+          : "is-size-2 nav-link"
+      }
     >
       {props.name}
     </Link>
   );
 }
 
-function SecondPanel(props) {
-  const [isActive, setActive] = useState(false);
-  const toggleClass = () => {
-    setActive(!isActive);
+function SecondPanel() {
+  const changeBodyClass = (className) => {
+    if (typeof document !== "undefined") {
+      const body = document.body.classList;
+      body.toggle(className);
+  } else {
+    return 
   }
-  let dropdownClasses = `navbar-item has-dropdown`;
+}
+
   return (
     <nav className={`navbar`} role="navigation" aria-label="main-navigation">
       <div className={`navbar-brand`}>
         <div className={`navbar-item`}>
           <HomeLink name="JJ" link="/" />
         </div>
+        <a
+          role="button"
+          className="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span className={`has-text-link`} aria-hidden="true"></span>
+          <span className={`has-text-link`} aria-hidden="true"></span>
+          <span className={`has-text-link`} aria-hidden="true"></span>
+        </a>
       </div>
-      <div className={`navbar-end`}>
-        <div className={`navbar-item`}>
-          <HomeLink name="About" link="/about" />
-        </div>
-        <div className={`navbar-item`}>
-          <HomeLink name="Blog" link="/blog" />
-        </div>
-        <div className={`navbar-item`}>
-          <HomeLink name="Stuff" link="/stuff" />
-        </div>
-        <div className={isActive ? dropdownClasses : dropdownClasses + ` is-active`} onClick={toggleClass}>
-          <a className={`navbar-link is-size-2 has-text-link`}>Theme</a>
-          <div className={`navbar-dropdown`}>
-            <div className={`navbar-item`}>
-              <Link className={`is-size-3`} to="/stuff">
-                Gruvbox
-              </Link>
-            </div>
-            <hr className={`navbar-divider`} />
-            <div className={`navbar-item`}>
-              <Link className={`is-size-3`} to="/">
-                Booberry
-              </Link>
+      <div className={`navbar-menu`}>
+        <div className={`navbar-end`}>
+          <div className={`navbar-item`}>
+            <HomeLink name="About" link="/about" />
+          </div>
+          <div className={`navbar-item`}>
+            <HomeLink name="Blog" link="/blog" />
+          </div>
+          <div className={`navbar-item`}>
+            <HomeLink name="Stuff" link="/stuff" />
+          </div>
+          <div
+            className={`navbar-item has-dropdown is-hoverable`}
+            role="navigation"
+          >
+            <a className={`navbar-link is-size-2 has-text-link`}>Theme</a>
+            <div className={`navbar-dropdown`}>
+              <div className={`navbar-item`}>
+                <Link className={`is-size-3`} to="/stuff">
+                  Gruvbox
+                </Link>
+              </div>
+              <hr className={`navbar-divider`} />
+              <div className={`navbar-item`}>
+                <a className={`is-size-3`} onClick={()=> changeBodyClass("booberry")}>
+                  Booberry
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -80,3 +103,4 @@ export default function Panel(props) {
     </div>
   );
 }
+
