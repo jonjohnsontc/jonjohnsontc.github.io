@@ -89,6 +89,7 @@ body .dot {
   border: none;
   opacity: 50%;
   cursor: pointer;
+  background-color: transparent;
 }
 body .dot.dot-background {
   background-color: #504945;

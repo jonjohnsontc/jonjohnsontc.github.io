@@ -131,6 +131,7 @@ body {
     border: none;
     opacity: 50%;
     cursor: pointer;
+    background-color: transparent;
     &.dot-background {
       background-color: $grey-darker;
       border-radius: 50%;
@@ -192,7 +193,7 @@ body.booberry {
     border-radius: 50%;
     border: none;
   }
-  
+
   .app {
     background-color: $white-ter;
     width: 100vw;

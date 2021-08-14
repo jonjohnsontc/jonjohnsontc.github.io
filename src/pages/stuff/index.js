@@ -9,6 +9,7 @@ export const stuffQuery = graphql`
           title
           date
           pic
+          icon
         }
         html
       }
@@ -41,7 +42,7 @@ export default function Stuff({ data }) {
   // used to represent each `stuff` entry above the carousel
   const Dot = props => {
     let classes = `dot is-inline-flex mr-2`
-    if (props.icon == null) {
+    if (props.icon == null || props.icon === "") {
       classes += ` dot-background`
     }
     return (
@@ -52,7 +53,7 @@ export default function Stuff({ data }) {
         disabled={props.disabled === true ? true : null}
       >
         <span>
-          <img src={props.icon} alt={props.icon == null ? "" : props.title}/>
+          <img src={props.icon} width="50px" alt={props.icon == null ? "" : props.title}/>
         </span>
       </button>
     );
@@ -67,12 +68,14 @@ export default function Stuff({ data }) {
           disabled: true,
           onClick: () => setIdx(index),
           key: index,
+          icon: nodes[index].frontmatter.icon
         });
       } else {
         dotArray[index] = Dot({
           disabled: false,
           onClick: () => setIdx(index),
           key: index,
+          icon: nodes[index].frontmatter.icon
         });
       }
     }

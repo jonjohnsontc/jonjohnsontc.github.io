@@ -29,7 +29,7 @@ function HomeLink(props) {
   );
 }
 
-function SecondPanel() {
+function Navbar() {
   const changeBodyClass = className => {
     if (typeof document !== "undefined") {
       const body = document.body.className;
@@ -43,6 +43,11 @@ function SecondPanel() {
     }
   };
 
+  const [isActive, setActive] = React.useState(false);
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
+  let navbarBurgerClasses = `navbar-burger`;
   return (
     <nav className={`navbar`} role="navigation" aria-label="main-navigation">
       <div className={`navbar-brand`}>
@@ -51,16 +56,20 @@ function SecondPanel() {
         </div>
         <a
           role="button"
-          className="navbar-burger"
+          className={isActive ? navbarBurgerClasses : navbarBurgerClasses + ` is-active`}
           aria-label="menu"
           aria-expanded="false"
+          onClick={toggleClass}
         >
           <span className={`has-text-link`} aria-hidden="true"></span>
           <span className={`has-text-link`} aria-hidden="true"></span>
           <span className={`has-text-link`} aria-hidden="true"></span>
         </a>
       </div>
-      <div className={`navbar-menu`}>
+      <div
+        className={isActive ? `navbar-menu` : `navbar-menu is-active`}
+        role="navigation"
+      >
         <div className={`navbar-end`}>
           <div className={`navbar-item`}>
             <HomeLink name="About" link="/about" />
@@ -105,7 +114,7 @@ export default function Panel(props) {
       {/* <div role="navigation" aria-label="main-navigation">
         <NavLinks />
       </div> */}
-      <SecondPanel/>
+      <Navbar />
       {props.children}
     </div>
   );

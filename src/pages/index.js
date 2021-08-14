@@ -19,5 +19,5 @@ function Bio() {
 }
 
 export default function Home() {
-  return <Splash logo={<Logo width="300" height="300" />} belowHeadline={<Bio />} prompt={<Greeting />} />
+  return <Splash logo={<Logo width="300" height="300"/>} belowHeadline={<Bio />} prompt={<Greeting />} />
 }
