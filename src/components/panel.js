@@ -71,8 +71,8 @@ function SecondPanel() {
             className={`navbar-item has-dropdown is-hoverable`}
             role="navigation"
           >
-            <a className={`navbar-link is-size-2 has-text-link`}>Theme</a>
-            <div className={`navbar-dropdown`}>
+            <a className={`navbar-link is-size-2`}>Theme</a>
+            <div id="dropdown" className={`navbar-dropdown`}>
               <div className={`navbar-item`}>
                 <Link className={`is-size-3`} to="/stuff">
                   Gruvbox

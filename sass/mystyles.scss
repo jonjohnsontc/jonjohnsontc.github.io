@@ -20,12 +20,13 @@ body {
   $red: #cc241d;
   $grey-dark: hsl(0, 0%, 29%);
   $navbar-background-color: $grey-darker;
-
+  
   $container-max-width: 800px;
   $link: #d3869b;
   $link-hover: $red;
   $link-active: $red;
   $button-background-color: $link;
+  $navbar-item-color: $link;
 
   .app {
     background-color: $white-ter;
@@ -100,6 +101,7 @@ body {
     align-items: center;
   }
 
+
   //////////////////////////
   // blog page elements //
   /////////////////////////
@@ -147,23 +149,64 @@ body {
 }
 
 body.booberry {
-  $white-ter: #fbf1c7;
-  $white: #f9f5d7;
-  $turquoise: #458588;
-  $green: #98971a;
-  $grey-darker: #3d31da;
-  $cyan: #076678;
+  /* Color Theme Swatches in Hex */
+  $color-theme_booberry-1-hex: #F2275D;
+  $color-theme_booberry-2-hex: #7139BF;
+  $color-theme_booberry-3-hex: #0468BF;
+  $color-theme_booberry-4-hex: #888C03;
+  $color-theme_booberry-5-hex: #F2F2F2;
+  $color-theme_booberry-6-hex: #F78A4C;
+  $color-theme_booberry-7-hex: #5EA4BC;
+
+  $white-ter: $color-theme_booberry-5-hex;
+  $white: hsl(0, 0%, 100%);
+  $turquoise: $color-theme_booberry-7-hex;
+  $green: $color-theme_booberry-4-hex;
+  $grey-darker: $color-theme_booberry-2-hex;
+  $cyan: $color-theme_booberry-3-hex;
   $yellow: #d79921;
-  $purple: #b16286;
-  $red: #cc241d;
+  $purple: $color-theme_booberry-2-hex;
+  $red: $color-theme_booberry-1-hex;
   $grey-dark: hsl(0, 0%, 29%);
   $navbar-background-color: $grey-darker;
-
+  
+  
   $container-max-width: 800px;
-  $link: #d3869b;
-  $link-hover: $red;
-  $link-active: $red;
+  $hr-background-color: $white-ter;
+  $link: #F2F2F2;
+  $link-hover: #F2F2F2;
+  $link-active: $turquoise;
   $button-background-color: $link;
+  $navbar-item-color: $link;
+  $navbar-item-active-color: $purple;
+  $navbar-item-active-background-color: $purple;
+  $navbar-item-hover-background-color: $purple;
+  
+  .app {
+    background-color: $white-ter;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .nav-active-link {
+    text-underline-offset: 0.2em;
+    text-decoration: underline 3px;
+    color: white;
+  }
+
+  .nav-button {
+    background-color: transparent;
+    border: none;
+  }
+
+  .navbar-item > a {
+    color: $white;
+  }
+
+  .navbar-dropdown > .navbar-item > a {
+    color: $cyan;
+  }
 
   @import "/Users/jonjohnson/dev/bulma/sass/utilities/initial-variables.sass";
   @import "/Users/jonjohnson/dev/bulma/sass/utilities/derived-variables.sass";
