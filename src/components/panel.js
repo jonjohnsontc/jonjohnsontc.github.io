@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 
 function HomeLink(props) {
@@ -30,18 +30,18 @@ function HomeLink(props) {
 }
 
 function SecondPanel() {
-  const changeBodyClass = (className) => {
+  const changeBodyClass = className => {
     if (typeof document !== "undefined") {
       const body = document.body.className;
       if (body !== className) {
-        document.body.className = className
+        document.body.className = className;
       } else {
-        return
+        return;
       }
-  } else {
-    return 
-  }
-}
+    } else {
+      return;
+    }
+  };
 
   return (
     <nav className={`navbar`} role="navigation" aria-label="main-navigation">
@@ -78,13 +78,16 @@ function SecondPanel() {
             <a className={`navbar-link is-size-2`}>Theme</a>
             <div id="dropdown" className={`navbar-dropdown`}>
               <div className={`navbar-item`}>
-                <a className={`is-size-3`} onClick={()=> changeBodyClass("")}>
+                <a className={`is-size-3`} onClick={() => changeBodyClass("")}>
                   Gruvbox
                 </a>
               </div>
               <hr className={`navbar-divider`} />
               <div className={`navbar-item`}>
-                <a className={`is-size-3`} onClick={()=> changeBodyClass("booberry")}>
+                <a
+                  className={`is-size-3`}
+                  onClick={() => changeBodyClass("booberry")}
+                >
                   Booberry
                 </a>
               </div>
@@ -102,9 +105,8 @@ export default function Panel(props) {
       {/* <div role="navigation" aria-label="main-navigation">
         <NavLinks />
       </div> */}
-      <SecondPanel />
+      <SecondPanel/>
       {props.children}
     </div>
   );
 }
-

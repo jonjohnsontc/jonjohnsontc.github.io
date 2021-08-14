@@ -54,7 +54,7 @@ body .nav-button {
 }
 body #jj {
   display: inline-block;
-  background-color: transparent;
+  background-color: #f9f5d7;
   border-radius: 50%;
   border: none;
 }
@@ -9799,6 +9799,12 @@ body.booberry hr {
 }
 body.booberry a {
   color: #0468BF;
+}
+body.booberry #jj {
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
 }
 body.booberry .app {
   background-color: #F2F2F2;

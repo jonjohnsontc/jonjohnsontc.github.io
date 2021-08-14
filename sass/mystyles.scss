@@ -76,7 +76,7 @@ body {
 
   #jj {
     display: inline-block;
-    background-color: transparent;
+    background-color: $white;
     border-radius: 50%;
     border: none;
   }
@@ -186,6 +186,13 @@ body.booberry {
     color: $cyan;
   }
 
+  #jj {
+    display: inline-block;
+    background-color: $white;
+    border-radius: 50%;
+    border: none;
+  }
+  
   .app {
     background-color: $white-ter;
     width: 100vw;
