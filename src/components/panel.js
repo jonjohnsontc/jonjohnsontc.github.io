@@ -32,8 +32,12 @@ function HomeLink(props) {
 function SecondPanel() {
   const changeBodyClass = (className) => {
     if (typeof document !== "undefined") {
-      const body = document.body.classList;
-      body.toggle(className);
+      const body = document.body.className;
+      if (body !== className) {
+        document.body.className = className
+      } else {
+        return
+      }
   } else {
     return 
   }
@@ -74,9 +78,9 @@ function SecondPanel() {
             <a className={`navbar-link is-size-2`}>Theme</a>
             <div id="dropdown" className={`navbar-dropdown`}>
               <div className={`navbar-item`}>
-                <Link className={`is-size-3`} to="/stuff">
+                <a className={`is-size-3`} onClick={()=> changeBodyClass("")}>
                   Gruvbox
-                </Link>
+                </a>
               </div>
               <hr className={`navbar-divider`} />
               <div className={`navbar-item`}>

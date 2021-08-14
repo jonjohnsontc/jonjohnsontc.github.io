@@ -169,19 +169,23 @@ body.booberry {
   $red: $color-theme_booberry-1-hex;
   $grey-dark: hsl(0, 0%, 29%);
   $navbar-background-color: $grey-darker;
-  
-  
+
   $container-max-width: 800px;
-  $hr-background-color: $white-ter;
-  $link: #F2F2F2;
-  $link-hover: #F2F2F2;
+  $link: $white-ter;
+  // $link-hover: #F2F2F2;
   $link-active: $turquoise;
-  $button-background-color: $link;
-  $navbar-item-color: $link;
-  $navbar-item-active-color: $purple;
-  $navbar-item-active-background-color: $purple;
-  $navbar-item-hover-background-color: $purple;
+  $button-background-color: $white-ter;
+  $navbar-item-color: $white-ter;
+  $navbar-item-hover-background-color: $cyan; 
   
+  hr {
+    background-color: $white-ter;
+  }
+
+  a {
+    color: $cyan;
+  }
+
   .app {
     background-color: $white-ter;
     width: 100vw;
@@ -208,6 +212,7 @@ body.booberry {
     color: $cyan;
   }
 
+  @import "/Users/jonjohnson/dev/bulma/sass/helpers/color.sass";
   @import "/Users/jonjohnson/dev/bulma/sass/utilities/initial-variables.sass";
   @import "/Users/jonjohnson/dev/bulma/sass/utilities/derived-variables.sass";
   @import "/Users/jonjohnson/dev/bulma/sass/components/navbar.sass";
