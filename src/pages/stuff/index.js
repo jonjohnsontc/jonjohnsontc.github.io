@@ -1,5 +1,6 @@
 import { graphql } from "gatsby";
 import React, { useState } from "react";
+import { Splash } from "../../components/page";
 
 export const stuffQuery = graphql`
   query StuffQuery {
@@ -97,12 +98,12 @@ export default function Stuff({ data }) {
   // and layouts > 800px wide
   const allTheStuff = (
     <>
-      <div className={`columns is-centered is-vcentered mt-6`}>
+      <div className={`columns is-centered mt-6`}>
         <div className={`column is-flex is-justify-content-flex-end`}>
           <button
             disabled={idx === 0 ? true : null}
             onClick={() => setIdx(idx - 1)}
-            className={`stuff-button is-size-1`}
+            className={`stuff-button is-size-1 stuff-reg`}
           >
             &lt; {/* Less than sign */}
           </button>
@@ -118,11 +119,11 @@ export default function Stuff({ data }) {
             title={nodes[idx].frontmatter.title}
           />
         </div>
-        <div className={`column`}>
+        <div className={`column is-flex`}>
           <button
             disabled={idx === nodes.length - 1 ? true : null}
             onClick={() => setIdx(idx + 1)}
-            className={`stuff-button is-size-1`}
+            className={`stuff-button is-size-1 stuff-reg`}
           >
             &gt; {/* Greater than sign */}
           </button>

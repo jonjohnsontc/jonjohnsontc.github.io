@@ -1,10 +1,12 @@
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
+
 // I've been unable to define font family in a more
-// local scope and get it to load on the website 
+// local scope and get it to load on the website
 // Fonts
 $family-primary: "Ubuntu Mono", monospace;
+$family-secondary: "Ubuntu Mono", monospace;
 
 body {
   // Global vars
@@ -20,7 +22,7 @@ body {
   $red: #cc241d;
   $grey-dark: hsl(0, 0%, 29%);
   $navbar-background-color: $grey-darker;
-  
+
   $container-max-width: 800px;
   $link: #d3869b;
   $link-hover: $red;
@@ -73,12 +75,22 @@ body {
     background-color: transparent;
     border: none;
   }
+  
+  .bi {
+    position: relative;
+    top: 5px;
+  }
 
   #jj {
     display: inline-block;
     background-color: $white;
     border-radius: 50%;
     border: none;
+  }
+
+  .logo {
+    position: relative;
+    top: 15px;
   }
 
   .sad-face {
@@ -100,7 +112,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-
 
   //////////////////////////
   // blog page elements //
@@ -125,8 +136,13 @@ body {
     &:disabled {
       opacity: 50%;
     }
+    // This class is applied to make the stuff buttons
+    // stay in place in normal view
+    &.stuff-reg {
+      position: absolute;
+      top: 40%;
+    }
   }
-
   .dot {
     border: none;
     opacity: 50%;
@@ -151,13 +167,16 @@ body {
 
 body.booberry {
   /* Color Theme Swatches in Hex */
-  $color-theme_booberry-1-hex: #F2275D;
-  $color-theme_booberry-2-hex: #7139BF;
-  $color-theme_booberry-3-hex: #0468BF;
-  $color-theme_booberry-4-hex: #888C03;
-  $color-theme_booberry-5-hex: #F2F2F2;
-  $color-theme_booberry-6-hex: #F78A4C;
-  $color-theme_booberry-7-hex: #5EA4BC;
+  // Initially derived from an adobe color extraction
+  // against a screenshot of the GitHub light vscode theme
+  // https://color.adobe.com/mythemes
+  $color-theme_booberry-1-hex: #f2275d;
+  $color-theme_booberry-2-hex: #7139bf;
+  $color-theme_booberry-3-hex: #0468bf;
+  $color-theme_booberry-4-hex: #888c03;
+  $color-theme_booberry-5-hex: #f2f2f2;
+  $color-theme_booberry-6-hex: #f78a4c;
+  $color-theme_booberry-7-hex: #5ea4bc;
 
   $white-ter: $color-theme_booberry-5-hex;
   $white: hsl(0, 0%, 100%);
@@ -177,8 +196,8 @@ body.booberry {
   $link-active: $turquoise;
   $button-background-color: $white-ter;
   $navbar-item-color: $white-ter;
-  $navbar-item-hover-background-color: $cyan; 
-  
+  $navbar-item-hover-background-color: $cyan;
+
   hr {
     background-color: $white-ter;
   }
@@ -218,6 +237,12 @@ body.booberry {
 
   .navbar-dropdown > .navbar-item > a {
     color: $cyan;
+  }
+
+  @media (max-width: 800px) {
+    .navbar-dropdown > .navbar-item > a {
+      color: $white;
+    }
   }
 
   @import "/Users/jonjohnson/dev/bulma/sass/helpers/color.sass";

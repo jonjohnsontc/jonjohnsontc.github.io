@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { Palette } from "./palette";
 
 function HomeLink(props) {
   // Checking for SSR
@@ -23,6 +24,7 @@ function HomeLink(props) {
           ? "is-size-2 nav-active-link"
           : "is-size-2 nav-link"
       }
+      onClick={props.onClick}
     >
       {props.name}
     </Link>
@@ -35,11 +37,7 @@ function Navbar() {
       const body = document.body.className;
       if (body !== className) {
         document.body.className = className;
-      } else {
-        return;
       }
-    } else {
-      return;
     }
   };
 
@@ -49,14 +47,20 @@ function Navbar() {
   };
   let navbarBurgerClasses = `navbar-burger`;
   return (
-    <nav className={`navbar`} role="navigation" aria-label="main-navigation">
+    <nav
+      className={`navbar is-family-sans-serif`}
+      role="navigation"
+      aria-label="main-navigation"
+    >
       <div className={`navbar-brand`}>
         <div className={`navbar-item`}>
-          <HomeLink name="JJ" link="/" />
+          <HomeLink name="JJ" link="/" onClick={toggleClass} />
         </div>
         <a
           role="button"
-          className={isActive ? navbarBurgerClasses : navbarBurgerClasses + ` is-active`}
+          className={
+            isActive ? navbarBurgerClasses : navbarBurgerClasses + ` is-active`
+          }
           aria-label="menu"
           aria-expanded="false"
           onClick={toggleClass}
@@ -72,30 +76,43 @@ function Navbar() {
       >
         <div className={`navbar-end`}>
           <div className={`navbar-item`}>
-            <HomeLink name="About" link="/about" />
+            <HomeLink name="About" link="/about" onClick={toggleClass} />
           </div>
           <div className={`navbar-item`}>
-            <HomeLink name="Blog" link="/blog" />
+            <HomeLink name="Blog" link="/blog" onClick={toggleClass} />
           </div>
           <div className={`navbar-item`}>
-            <HomeLink name="Stuff" link="/stuff" />
+            <HomeLink name="Stuff" link="/stuff" onClick={toggleClass} />
           </div>
           <div
             className={`navbar-item has-dropdown is-hoverable`}
             role="navigation"
           >
-            <a className={`navbar-link is-size-2`}>Theme</a>
+            <a className={`navbar-link is-size-2`}>
+              <span>
+                <Palette />
+              </span>
+            </a>
             <div id="dropdown" className={`navbar-dropdown`}>
               <div className={`navbar-item`}>
-                <a className={`is-size-3`} onClick={() => changeBodyClass("")}>
+                <a
+                  className={`is-size-5`}
+                  onClick={() => {
+                    changeBodyClass("");
+                    setActive(!isActive);
+                  }}
+                >
                   Gruvbox
                 </a>
               </div>
               <hr className={`navbar-divider`} />
               <div className={`navbar-item`}>
                 <a
-                  className={`is-size-3`}
-                  onClick={() => changeBodyClass("booberry")}
+                  className={`is-size-5`}
+                  onClick={() => {
+                    changeBodyClass("booberry");
+                    setActive(!isActive);
+                  }}
                 >
                   Booberry
                 </a>

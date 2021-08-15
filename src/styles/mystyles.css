@@ -52,11 +52,19 @@ body .nav-button {
   background-color: transparent;
   border: none;
 }
+body .bi {
+  position: relative;
+  top: 5px;
+}
 body #jj {
   display: inline-block;
   background-color: #f9f5d7;
   border-radius: 50%;
   border: none;
+}
+body .logo {
+  position: relative;
+  top: 15px;
 }
 body .sad-face {
   font-size: 10rem;
@@ -84,6 +92,10 @@ body .stuff-button {
 }
 body .stuff-button:disabled {
   opacity: 50%;
+}
+body .stuff-button.stuff-reg {
+  position: absolute;
+  top: 40%;
 }
 body .dot {
   border: none;
@@ -8711,7 +8723,7 @@ body .is-family-primary {
   font-family: "Ubuntu Mono", monospace !important;
 }
 body .is-family-secondary {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Ubuntu Mono", monospace !important;
 }
 body .is-family-sans-serif {
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
@@ -9796,10 +9808,10 @@ body.booberry {
   /* Color Theme Swatches in Hex */
 }
 body.booberry hr {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 body.booberry a {
-  color: #0468BF;
+  color: #0468bf;
 }
 body.booberry #jj {
   display: inline-block;
@@ -9808,7 +9820,7 @@ body.booberry #jj {
   border: none;
 }
 body.booberry .app {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   width: 100vw;
   height: 100vh;
   overflow-y: auto;
@@ -9826,7 +9838,12 @@ body.booberry .navbar-item > a {
   color: white;
 }
 body.booberry .navbar-dropdown > .navbar-item > a {
-  color: #0468BF;
+  color: #0468bf;
+}
+@media (max-width: 800px) {
+  body.booberry .navbar-dropdown > .navbar-item > a {
+    color: white;
+  }
 }
 body.booberry .has-text-white {
   color: white !important;
@@ -9847,31 +9864,31 @@ body.booberry .has-background-black {
   background-color: #0a0a0a !important;
 }
 body.booberry .has-text-light {
-  color: #F2F2F2 !important;
+  color: #f2f2f2 !important;
 }
 body.booberry a.has-text-light:hover, body.booberry a.has-text-light:focus {
   color: #d9d9d9 !important;
 }
 body.booberry .has-background-light {
-  background-color: #F2F2F2 !important;
+  background-color: #f2f2f2 !important;
 }
 body.booberry .has-text-dark {
-  color: #7139BF !important;
+  color: #7139bf !important;
 }
 body.booberry a.has-text-dark:hover, body.booberry a.has-text-dark:focus {
   color: #5a2d98 !important;
 }
 body.booberry .has-background-dark {
-  background-color: #7139BF !important;
+  background-color: #7139bf !important;
 }
 body.booberry .has-text-primary {
-  color: #5EA4BC !important;
+  color: #5ea4bc !important;
 }
 body.booberry a.has-text-primary:hover, body.booberry a.has-text-primary:focus {
   color: #448ba3 !important;
 }
 body.booberry .has-background-primary {
-  background-color: #5EA4BC !important;
+  background-color: #5ea4bc !important;
 }
 body.booberry .has-text-primary-light {
   color: #f1f7f9 !important;
@@ -9892,13 +9909,13 @@ body.booberry .has-background-primary-dark {
   background-color: #377185 !important;
 }
 body.booberry .has-text-link {
-  color: #F2F2F2 !important;
+  color: #f2f2f2 !important;
 }
 body.booberry a.has-text-link:hover, body.booberry a.has-text-link:focus {
   color: #d9d9d9 !important;
 }
 body.booberry .has-background-link {
-  background-color: #F2F2F2 !important;
+  background-color: #f2f2f2 !important;
 }
 body.booberry .has-text-link-light {
   color: whitesmoke !important;
@@ -9919,13 +9936,13 @@ body.booberry .has-background-link-dark {
   background-color: #4a4a4a !important;
 }
 body.booberry .has-text-info {
-  color: #0468BF !important;
+  color: #0468bf !important;
 }
 body.booberry a.has-text-info:hover, body.booberry a.has-text-info:focus {
   color: #034d8d !important;
 }
 body.booberry .has-background-info {
-  background-color: #0468BF !important;
+  background-color: #0468bf !important;
 }
 body.booberry .has-text-info-light {
   color: #ebf5ff !important;
@@ -9946,13 +9963,13 @@ body.booberry .has-background-info-dark {
   background-color: #0583f0 !important;
 }
 body.booberry .has-text-success {
-  color: #888C03 !important;
+  color: #888c03 !important;
 }
 body.booberry a.has-text-success:hover, body.booberry a.has-text-success:focus {
   color: #575a02 !important;
 }
 body.booberry .has-background-success {
-  background-color: #888C03 !important;
+  background-color: #888c03 !important;
 }
 body.booberry .has-text-success-light {
   color: #feffeb !important;
@@ -10000,13 +10017,13 @@ body.booberry .has-background-warning-dark {
   background-color: #966b17 !important;
 }
 body.booberry .has-text-danger {
-  color: #F2275D !important;
+  color: #f2275d !important;
 }
 body.booberry a.has-text-danger:hover, body.booberry a.has-text-danger:focus {
   color: #d90d43 !important;
 }
 body.booberry .has-background-danger {
-  background-color: #F2275D !important;
+  background-color: #f2275d !important;
 }
 body.booberry .has-text-danger-light {
   color: #feecf1 !important;
@@ -10039,10 +10056,10 @@ body.booberry .has-background-black-ter {
   background-color: #242424 !important;
 }
 body.booberry .has-text-grey-darker {
-  color: #7139BF !important;
+  color: #7139bf !important;
 }
 body.booberry .has-background-grey-darker {
-  background-color: #7139BF !important;
+  background-color: #7139bf !important;
 }
 body.booberry .has-text-grey-dark {
   color: #4a4a4a !important;
@@ -10069,10 +10086,10 @@ body.booberry .has-background-grey-lighter {
   background-color: #dbdbdb !important;
 }
 body.booberry .has-text-white-ter {
-  color: #F2F2F2 !important;
+  color: #f2f2f2 !important;
 }
 body.booberry .has-background-white-ter {
-  background-color: #F2F2F2 !important;
+  background-color: #f2f2f2 !important;
 }
 body.booberry .has-text-white-bis {
   color: #fafafa !important;
@@ -10081,7 +10098,7 @@ body.booberry .has-background-white-bis {
   background-color: #fafafa !important;
 }
 body.booberry .navbar {
-  background-color: #7139BF;
+  background-color: #7139bf;
   min-height: 3.25rem;
   position: relative;
   z-index: 30;
@@ -10199,7 +10216,7 @@ body.booberry .navbar.is-black .navbar-item.has-dropdown.is-active .navbar-link 
   }
 }
 body.booberry .navbar.is-light {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   color: rgba(0, 0, 0, 0.7);
 }
 body.booberry .navbar.is-light .navbar-brand > .navbar-item,
@@ -10250,12 +10267,12 @@ body.booberry .navbar.is-light .navbar-item.has-dropdown.is-active .navbar-link 
     color: rgba(0, 0, 0, 0.7);
   }
   body.booberry .navbar.is-light .navbar-dropdown a.navbar-item.is-active {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
     color: rgba(0, 0, 0, 0.7);
   }
 }
 body.booberry .navbar.is-dark {
-  background-color: #7139BF;
+  background-color: #7139bf;
   color: #fff;
 }
 body.booberry .navbar.is-dark .navbar-brand > .navbar-item,
@@ -10306,12 +10323,12 @@ body.booberry .navbar.is-dark .navbar-item.has-dropdown.is-active .navbar-link {
     color: #fff;
   }
   body.booberry .navbar.is-dark .navbar-dropdown a.navbar-item.is-active {
-    background-color: #7139BF;
+    background-color: #7139bf;
     color: #fff;
   }
 }
 body.booberry .navbar.is-primary {
-  background-color: #5EA4BC;
+  background-color: #5ea4bc;
   color: #fff;
 }
 body.booberry .navbar.is-primary .navbar-brand > .navbar-item,
@@ -10362,12 +10379,12 @@ body.booberry .navbar.is-primary .navbar-item.has-dropdown.is-active .navbar-lin
     color: #fff;
   }
   body.booberry .navbar.is-primary .navbar-dropdown a.navbar-item.is-active {
-    background-color: #5EA4BC;
+    background-color: #5ea4bc;
     color: #fff;
   }
 }
 body.booberry .navbar.is-link {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   color: rgba(0, 0, 0, 0.7);
 }
 body.booberry .navbar.is-link .navbar-brand > .navbar-item,
@@ -10418,12 +10435,12 @@ body.booberry .navbar.is-link .navbar-item.has-dropdown.is-active .navbar-link {
     color: rgba(0, 0, 0, 0.7);
   }
   body.booberry .navbar.is-link .navbar-dropdown a.navbar-item.is-active {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
     color: rgba(0, 0, 0, 0.7);
   }
 }
 body.booberry .navbar.is-info {
-  background-color: #0468BF;
+  background-color: #0468bf;
   color: #fff;
 }
 body.booberry .navbar.is-info .navbar-brand > .navbar-item,
@@ -10474,12 +10491,12 @@ body.booberry .navbar.is-info .navbar-item.has-dropdown.is-active .navbar-link {
     color: #fff;
   }
   body.booberry .navbar.is-info .navbar-dropdown a.navbar-item.is-active {
-    background-color: #0468BF;
+    background-color: #0468bf;
     color: #fff;
   }
 }
 body.booberry .navbar.is-success {
-  background-color: #888C03;
+  background-color: #888c03;
   color: #fff;
 }
 body.booberry .navbar.is-success .navbar-brand > .navbar-item,
@@ -10530,7 +10547,7 @@ body.booberry .navbar.is-success .navbar-item.has-dropdown.is-active .navbar-lin
     color: #fff;
   }
   body.booberry .navbar.is-success .navbar-dropdown a.navbar-item.is-active {
-    background-color: #888C03;
+    background-color: #888c03;
     color: #fff;
   }
 }
@@ -10591,7 +10608,7 @@ body.booberry .navbar.is-warning .navbar-item.has-dropdown.is-active .navbar-lin
   }
 }
 body.booberry .navbar.is-danger {
-  background-color: #F2275D;
+  background-color: #f2275d;
   color: #fff;
 }
 body.booberry .navbar.is-danger .navbar-brand > .navbar-item,
@@ -10642,7 +10659,7 @@ body.booberry .navbar.is-danger .navbar-item.has-dropdown.is-active .navbar-link
     color: #fff;
   }
   body.booberry .navbar.is-danger .navbar-dropdown a.navbar-item.is-active {
-    background-color: #F2275D;
+    background-color: #f2275d;
     color: #fff;
   }
 }
@@ -10653,7 +10670,7 @@ body.booberry .navbar > .container {
   width: 100%;
 }
 body.booberry .navbar.has-shadow {
-  box-shadow: 0 2px 0 0 #F2F2F2;
+  box-shadow: 0 2px 0 0 #f2f2f2;
 }
 body.booberry .navbar.is-fixed-bottom, body.booberry .navbar.is-fixed-top {
   left: 0;
@@ -10665,7 +10682,7 @@ body.booberry .navbar.is-fixed-bottom {
   bottom: 0;
 }
 body.booberry .navbar.is-fixed-bottom.has-shadow {
-  box-shadow: 0 -2px 0 0 #F2F2F2;
+  box-shadow: 0 -2px 0 0 #f2f2f2;
 }
 body.booberry .navbar.is-fixed-top {
   top: 0;
@@ -10695,7 +10712,7 @@ body.booberry .navbar-tabs {
   overflow-y: hidden;
 }
 body.booberry .navbar-burger {
-  color: #F2F2F2;
+  color: #f2f2f2;
   cursor: pointer;
   display: block;
   height: 3.25rem;
@@ -10741,7 +10758,7 @@ body.booberry .navbar-menu {
 }
 body.booberry .navbar-item,
 body.booberry .navbar-link {
-  color: #F2F2F2;
+  color: #f2f2f2;
   display: block;
   line-height: 1.5;
   padding: 0.5rem 0.75rem;
@@ -10761,8 +10778,8 @@ body.booberry .navbar-link:focus,
 body.booberry .navbar-link:focus-within,
 body.booberry .navbar-link:hover,
 body.booberry .navbar-link.is-active {
-  background-color: #0468BF;
-  color: #F2F2F2;
+  background-color: #0468bf;
+  color: #f2f2f2;
 }
 body.booberry .navbar-item {
   flex-grow: 0;
@@ -10785,14 +10802,14 @@ body.booberry .navbar-item.is-tab {
 }
 body.booberry .navbar-item.is-tab:focus, body.booberry .navbar-item.is-tab:hover {
   background-color: transparent;
-  border-bottom-color: #F2F2F2;
+  border-bottom-color: #f2f2f2;
 }
 body.booberry .navbar-item.is-tab.is-active {
   background-color: transparent;
-  border-bottom-color: #F2F2F2;
+  border-bottom-color: #f2f2f2;
   border-bottom-style: solid;
   border-bottom-width: 3px;
-  color: #F2F2F2;
+  color: #f2f2f2;
   padding-bottom: calc(0.5rem - 3px);
 }
 body.booberry .navbar-content {
@@ -10803,7 +10820,7 @@ body.booberry .navbar-link:not(.is-arrowless) {
   padding-right: 2.5em;
 }
 body.booberry .navbar-link:not(.is-arrowless)::after {
-  border-color: #F2F2F2;
+  border-color: #f2f2f2;
   margin-top: -0.375em;
   right: 1.125em;
 }
@@ -10817,7 +10834,7 @@ body.booberry .navbar-dropdown .navbar-item {
   padding-right: 1.5rem;
 }
 body.booberry .navbar-divider {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border: none;
   display: none;
   height: 2px;
@@ -10836,7 +10853,7 @@ body.booberry .navbar-tabs .navbar-item {
     display: none;
   }
   body.booberry .navbar-menu {
-    background-color: #7139BF;
+    background-color: #7139bf;
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0;
   }
@@ -10904,12 +10921,12 @@ body.booberry .navbar.is-transparent .navbar-link.is-active {
     background-color: transparent !important;
   }
   body.booberry .navbar.is-transparent .navbar-dropdown a.navbar-item:focus, body.booberry .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
     color: #0a0a0a;
   }
   body.booberry .navbar.is-transparent .navbar-dropdown a.navbar-item.is-active {
-    background-color: #F2F2F2;
-    color: #F2F2F2;
+    background-color: #f2f2f2;
+    color: #f2f2f2;
   }
   body.booberry .navbar-burger {
     display: none;
@@ -10975,12 +10992,12 @@ body.booberry .navbar-link {
     padding-right: 3rem;
   }
   body.booberry .navbar-dropdown a.navbar-item:focus, body.booberry .navbar-dropdown a.navbar-item:hover {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
     color: #0a0a0a;
   }
   body.booberry .navbar-dropdown a.navbar-item.is-active {
-    background-color: #F2F2F2;
-    color: #F2F2F2;
+    background-color: #f2f2f2;
+    color: #f2f2f2;
   }
   .navbar.is-spaced body.booberry .navbar-dropdown, body.booberry .navbar-dropdown.is-boxed {
     border-radius: 6px;
@@ -11049,7 +11066,7 @@ body.booberry .navbar-link.is-active:not(:focus):not(:hover) {
     background-color: transparent;
   }
   body.booberry .navbar-item.has-dropdown:focus .navbar-link, body.booberry .navbar-item.has-dropdown:hover .navbar-link, body.booberry .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #0468BF;
+    background-color: #0468bf;
   }
 }
 body.booberry .hero.is-fullheight-with-navbar {
@@ -11495,7 +11512,7 @@ body.booberry .hero.is-fullheight-with-navbar {
 }
 
 .is-family-secondary {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Ubuntu Mono", monospace !important;
 }
 
 .is-family-sans-serif {
