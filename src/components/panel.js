@@ -54,7 +54,7 @@ function Navbar() {
     >
       <div className={`navbar-brand`}>
         <div className={`navbar-item`}>
-          <HomeLink name="JJ" link="/" onClick={toggleClass} />
+          <HomeLink name="Jon Johnson" link="/" onClick={toggleClass} />
         </div>
         <a
           role="button"
@@ -128,9 +128,6 @@ function Navbar() {
 export default function Panel(props) {
   return (
     <div className="app">
-      {/* <div role="navigation" aria-label="main-navigation">
-        <NavLinks />
-      </div> */}
       <Navbar />
       {props.children}
     </div>

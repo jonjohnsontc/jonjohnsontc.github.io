@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "jonj.io ~ Home of the Hange Fan Club",
+    title: "Welcome to my website ~ jonj.io",
   },
   plugins: [
     {

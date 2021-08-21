@@ -26,6 +26,15 @@ export default function Template({ data }) {
         className={`blog-post-content mt-6`}
         dangerouslySetInnerHTML={{ __html: html }}
       />
+      <footer
+        className="footer"
+        children={
+          <span className="has-text-centered">
+            ~ Thanks for reading! If you enjoyed it, consider sharing it with
+            someone u like 💜 ~
+          </span>
+        }
+      />
     </div>
   );
 }

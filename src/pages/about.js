@@ -24,7 +24,7 @@ function AboutMe() {
         <li className={`pb-2`}>May 12th, 1988</li>
         <li className={`has-text-weight-bold`}>Currently Resides In:</li>
         <li className={`pb-2`}>Los Angeles, CA</li>
-        <li className={`has-text-weight-bold`}>Dependents:</li>
+        <li className={`has-text-weight-bold`}>Crew Includes:</li>
         <li className={`pb-2`}>Two Cats</li>
         <li className={`py-2`}>
           <a href="mailto:jonjohnsontc@live.com">Get in touch! 👋🏽</a>
@@ -39,17 +39,18 @@ function AboutMe() {
         <hr />
         <li className={`is-size-3 py-3`}>About Me</li>
         <li>
-          I'm a software engineer who loves tackling problems in the media
-          space.
+          I'm a Software Engineer who loves to tinker around with tech and learn.
         </li>
-        <li>I used to work in music, and have a lot of experience helping </li>
-        <li>And I enjoy writing tests!</li>
         <hr />
         <li className={`is-size-3 py-3`}>Tech I like to work with</li>
         <li className={`pb-3`}>
           AWS, Python, Clojure(script), PostgreSQL, Javascript, Docker, Spark,
           Git
         </li>
+        <hr />
+        <li className={`is-size-3 py-3`}>About the Content on This Site</li>
+        <li>Everything you </li>
+        <li className={`pb-3`}>If you're interested in figuring out how it's built, you can find the source <a href="https://github.com/jonjohnsontc/jonjohnsontc.github.io">here</a></li>
       </ul>
     </article>
   )

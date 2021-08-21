@@ -42,9 +42,9 @@ export default function Stuff({ data }) {
 
   // used to represent each `stuff` entry above the carousel
   const Dot = props => {
-    let classes = `dot is-inline-flex mr-2`
+    let classes = `dot is-inline-flex mr-2`;
     if (props.icon == null || props.icon === "") {
-      classes += ` dot-background`
+      classes += ` dot-background`;
     }
     return (
       <button
@@ -54,7 +54,11 @@ export default function Stuff({ data }) {
         disabled={props.disabled === true ? true : null}
       >
         <span>
-          <img src={props.icon} width="50px" alt={props.icon == null ? "" : props.title}/>
+          <img
+            src={props.icon}
+            width="50px"
+            alt={props.icon == null ? "" : props.title}
+          />
         </span>
       </button>
     );
@@ -69,14 +73,14 @@ export default function Stuff({ data }) {
           disabled: true,
           onClick: () => setIdx(index),
           key: index,
-          icon: nodes[index].frontmatter.icon
+          icon: nodes[index].frontmatter.icon,
         });
       } else {
         dotArray[index] = Dot({
           disabled: false,
           onClick: () => setIdx(index),
           key: index,
-          icon: nodes[index].frontmatter.icon
+          icon: nodes[index].frontmatter.icon,
         });
       }
     }
@@ -94,10 +98,20 @@ export default function Stuff({ data }) {
     );
   };
 
+  const stuffTitle = (
+    <p className={`title is-size-1 has-text-centered`}>Stuff</p>
+  );
+  const stuffPrompt = (
+    <p>
+      Here's some side-projects that I've worked on.
+    </p>
+  );
+
   // This is the standard layout for 'Stuff', it's used in SSR
   // and layouts > 800px wide
   const allTheStuff = (
     <>
+      <Splash logo={stuffTitle} prompt={stuffPrompt} />
       <div className={`columns is-centered mt-6`}>
         <div className={`column is-flex is-justify-content-flex-end`}>
           <button
@@ -140,6 +154,7 @@ export default function Stuff({ data }) {
     if (window.innerWidth <= 800) {
       return (
         <>
+          <Splash logo={stuffTitle} prompt={stuffPrompt} />
           <div className={`columns is-centered is-vcentered mt-6`}>
             <div className={`column is-half`}>
               <Dots />

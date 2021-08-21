@@ -1,12 +1,13 @@
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
 
 // I've been unable to define font family in a more
 // local scope and get it to load on the website
 // Fonts
 $family-primary: "Ubuntu Mono", monospace;
 $family-secondary: "Ubuntu Mono", monospace;
+// $family-sans-serif: "Rubik", sans-serif;
 
 body {
   // Global vars
@@ -28,12 +29,13 @@ body {
   $link-hover: $red;
   $link-active: $red;
   $button-background-color: $link;
+  $footer-background-color: $white-ter;
   $navbar-item-color: $link;
 
   .app {
     background-color: $white-ter;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     overflow-y: auto;
   }
 
@@ -140,7 +142,7 @@ body {
     // stay in place in normal view
     &.stuff-reg {
       position: absolute;
-      top: 40%;
+      top: 55%;
     }
   }
   .dot {
@@ -192,7 +194,6 @@ body.booberry {
 
   $container-max-width: 800px;
   $link: $white-ter;
-  // $link-hover: #F2F2F2;
   $link-active: $turquoise;
   $button-background-color: $white-ter;
   $navbar-item-color: $white-ter;
@@ -204,6 +205,11 @@ body.booberry {
 
   a {
     color: $cyan;
+  }
+
+  code {
+    background-color: $white;
+    color: $link-active;
   }
 
   #jj {
@@ -243,6 +249,10 @@ body.booberry {
     .navbar-dropdown > .navbar-item > a {
       color: $white;
     }
+  }
+
+  .footer {
+    background-color: $white-ter;
   }
 
   @import "/Users/jonjohnson/dev/bulma/sass/helpers/color.sass";
