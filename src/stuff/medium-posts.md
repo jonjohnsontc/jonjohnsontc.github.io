@@ -6,4 +6,4 @@ slug: "/stuff/"
 icon: "journal-bookmark.svg"
 ---
 
-Here you can check out some classic music biz writings
+Way way way back, I used to work in music. My time there mostly consisted of doing biz stuff on the periphery, but it was stuff I grew to love. I wrote a number of posts on Medium that highlighted a bunch of (I think) relatively obscure and interesting things in music. You can check them out [here](https://medium.com/@JonJohnsonTC)

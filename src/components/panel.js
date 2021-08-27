@@ -54,7 +54,7 @@ function Navbar() {
     >
       <div className={`navbar-brand`}>
         <div className={`navbar-item`}>
-          <HomeLink name="Jon Johnson" link="/" onClick={toggleClass} />
+          <HomeLink name="JON JOHNSON" link="/" onClick={toggleClass} />
         </div>
         <a
           role="button"
@@ -93,7 +93,7 @@ function Navbar() {
                 <Palette />
               </span>
             </a>
-            <div id="dropdown" className={`navbar-dropdown`}>
+            <div className={`navbar-dropdown`}>
               <div className={`navbar-item`}>
                 <a
                   className={`is-size-5`}

@@ -49,17 +49,19 @@ function AboutMe() {
         </li>
         <hr />
         <li className={`is-size-3 py-3`}>About the Content on This Site</li>
-        <li>Everything you </li>
         <li className={`pb-3`}>If you're interested in figuring out how it's built, you can find the source <a href="https://github.com/jonjohnsontc/jonjohnsontc.github.io">here</a></li>
       </ul>
     </article>
   )
   return (
+    <>
     <SimpleHeadline
       logo={<img src={myPic} alt="JJ Headshot" className={`jj-pic mt-6`}></img>}
       prompt={statLine}
       belowHeadline={selectBio}
     />
+    <footer className="footer" />
+    </>
   )
 }
 

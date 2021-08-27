@@ -16,18 +16,16 @@ export default function Template({ data }) {
           >
             {frontmatter.title}
           </p>
-          <p className={`pl-6 subtitle is-inline has-text-white`}>
-            {frontmatter.date}
-          </p>
         </div>
       </div>
-
+      
+      <span>{frontmatter.date}</span>
       <div
-        className={`blog-post-content mt-6`}
+        className={`blog-post-content mt-3`}
         dangerouslySetInnerHTML={{ __html: html }}
       />
       <footer
-        className="footer"
+        className="footer is-flex is-justify-content-center"
         children={
           <span className="has-text-centered">
             ~ Thanks for reading! If you enjoyed it, consider sharing it with

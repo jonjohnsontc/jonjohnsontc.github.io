@@ -40,7 +40,7 @@ export default function Blog({ data }) {
 
   const blogTitle = <h1 className={`title is-size-1 has-text-centered`}>Blog</h1>
   const blogPrompt = (
-    <h2 className={`is-size-4`}>Standard issue blog fare served</h2>
+    <h2 className={`is-size-4 has-text-centered`}>Standard issue blog fare served fresh</h2>
   )
 
   return (

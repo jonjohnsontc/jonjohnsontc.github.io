@@ -6,7 +6,7 @@ export function Palette() {
       if (document.body.className === "") {
         return "#d3869b"
       } else {
-        return "#ffffff"
+        return "#7139bf"
   }} else {
     return "#d3869b"
   }})

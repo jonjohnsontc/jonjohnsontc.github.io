@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 body {
   /*! bulma.io v0.9.2 | MIT License | github.com/jgthms/bulma */
   /* Bulma Utilities */
@@ -12,6 +12,13 @@ body {
   /* Bulma Grid */
   /* Bulma Helpers */
   /* Bulma Layout */
+}
+body pre {
+  background-color: #4a4a4a !important;
+}
+body pre code {
+  background-color: transparent !important;
+  color: white !important;
 }
 body .app {
   background-color: #fbf1c7;
@@ -45,7 +52,7 @@ body #nav .nav-item .nav-active-link {
   color: #cc241d;
 }
 body .nav-active-link {
-  text-underline-offset: 0.2em;
+  text-underline-offset: 0.3em;
   text-decoration: underline 3px;
   color: #cc241d;
 }
@@ -4399,7 +4406,7 @@ body .modal-card-body {
   padding: 20px;
 }
 body .navbar {
-  background-color: #504945;
+  background-color: #fbf1c7;
   min-height: 3.25rem;
   position: relative;
   z-index: 30;
@@ -5079,7 +5086,7 @@ body .navbar-link:focus,
 body .navbar-link:focus-within,
 body .navbar-link:hover,
 body .navbar-link.is-active {
-  background-color: #fafafa;
+  background-color: #fbf1c7;
   color: #d3869b;
 }
 body .navbar-item {
@@ -5154,7 +5161,7 @@ body .navbar-tabs .navbar-item {
     display: none;
   }
   body .navbar-menu {
-    background-color: #504945;
+    background-color: #fbf1c7;
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0;
   }
@@ -5367,7 +5374,7 @@ body .navbar-link.is-active:not(:focus):not(:hover) {
     background-color: transparent;
   }
   body .navbar-item.has-dropdown:focus .navbar-link, body .navbar-item.has-dropdown:hover .navbar-link, body .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #fafafa;
+    background-color: #fbf1c7;
   }
 }
 body .hero.is-fullheight-with-navbar {
@@ -8727,7 +8734,7 @@ body .is-family-secondary {
   font-family: "Ubuntu Mono", monospace !important;
 }
 body .is-family-sans-serif {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Noto Sans", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
 }
 body .is-family-monospace {
   font-family: monospace !important;
@@ -9815,8 +9822,15 @@ body.booberry a {
   color: #0468bf;
 }
 body.booberry code {
-  background-color: white;
-  color: #5ea4bc;
+  background-color: transparent;
+  color: #f2275d;
+}
+body.booberry pre {
+  background-color: #4a4a4a;
+}
+body.booberry pre code {
+  background-color: transparent;
+  color: white;
 }
 body.booberry #jj {
   display: inline-block;
@@ -9827,23 +9841,26 @@ body.booberry #jj {
 body.booberry .app {
   background-color: #f2f2f2;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: auto;
 }
 body.booberry .nav-active-link {
-  text-underline-offset: 0.2em;
+  text-underline-offset: 0.3em;
   text-decoration: underline 3px;
-  color: white;
+  color: #f2275d !important;
 }
 body.booberry .nav-button {
   background-color: transparent;
   border: none;
 }
 body.booberry .navbar-item > a {
-  color: white;
+  color: #7139bf;
+}
+body.booberry .navbar-item > a:hover {
+  color: #f2275d;
 }
 body.booberry .navbar-dropdown > .navbar-item > a {
-  color: #0468bf;
+  color: #7139bf;
 }
 @media (max-width: 800px) {
   body.booberry .navbar-dropdown > .navbar-item > a {
@@ -9917,31 +9934,31 @@ body.booberry .has-background-primary-dark {
   background-color: #377185 !important;
 }
 body.booberry .has-text-link {
-  color: #f2f2f2 !important;
+  color: #7139bf !important;
 }
 body.booberry a.has-text-link:hover, body.booberry a.has-text-link:focus {
-  color: #d9d9d9 !important;
+  color: #5a2d98 !important;
 }
 body.booberry .has-background-link {
-  background-color: #f2f2f2 !important;
+  background-color: #7139bf !important;
 }
 body.booberry .has-text-link-light {
-  color: whitesmoke !important;
+  color: #f4effa !important;
 }
 body.booberry a.has-text-link-light:hover, body.booberry a.has-text-link-light:focus {
-  color: #dbdbdb !important;
+  color: #d8c8ef !important;
 }
 body.booberry .has-background-link-light {
-  background-color: whitesmoke !important;
+  background-color: #f4effa !important;
 }
 body.booberry .has-text-link-dark {
-  color: #4a4a4a !important;
+  color: #743bc4 !important;
 }
 body.booberry a.has-text-link-dark:hover, body.booberry a.has-text-link-dark:focus {
-  color: #636363 !important;
+  color: #9062d0 !important;
 }
 body.booberry .has-background-link-dark {
-  background-color: #4a4a4a !important;
+  background-color: #743bc4 !important;
 }
 body.booberry .has-text-info {
   color: #0468bf !important;
@@ -10106,7 +10123,7 @@ body.booberry .has-background-white-bis {
   background-color: #fafafa !important;
 }
 body.booberry .navbar {
-  background-color: #7139bf;
+  background-color: #f2f2f2;
   min-height: 3.25rem;
   position: relative;
   z-index: 30;
@@ -10392,32 +10409,32 @@ body.booberry .navbar.is-primary .navbar-item.has-dropdown.is-active .navbar-lin
   }
 }
 body.booberry .navbar.is-link {
-  background-color: #f2f2f2;
-  color: rgba(0, 0, 0, 0.7);
+  background-color: #7139bf;
+  color: #fff;
 }
 body.booberry .navbar.is-link .navbar-brand > .navbar-item,
 body.booberry .navbar.is-link .navbar-brand .navbar-link {
-  color: rgba(0, 0, 0, 0.7);
+  color: #fff;
 }
 body.booberry .navbar.is-link .navbar-brand > a.navbar-item:focus, body.booberry .navbar.is-link .navbar-brand > a.navbar-item:hover, body.booberry .navbar.is-link .navbar-brand > a.navbar-item.is-active,
 body.booberry .navbar.is-link .navbar-brand .navbar-link:focus,
 body.booberry .navbar.is-link .navbar-brand .navbar-link:hover,
 body.booberry .navbar.is-link .navbar-brand .navbar-link.is-active {
-  background-color: #e5e5e5;
-  color: rgba(0, 0, 0, 0.7);
+  background-color: #6533ab;
+  color: #fff;
 }
 body.booberry .navbar.is-link .navbar-brand .navbar-link::after {
-  border-color: rgba(0, 0, 0, 0.7);
+  border-color: #fff;
 }
 body.booberry .navbar.is-link .navbar-burger {
-  color: rgba(0, 0, 0, 0.7);
+  color: #fff;
 }
 @media screen and (min-width: 1024px) {
   body.booberry .navbar.is-link .navbar-start > .navbar-item,
 body.booberry .navbar.is-link .navbar-start .navbar-link,
 body.booberry .navbar.is-link .navbar-end > .navbar-item,
 body.booberry .navbar.is-link .navbar-end .navbar-link {
-    color: rgba(0, 0, 0, 0.7);
+    color: #fff;
   }
   body.booberry .navbar.is-link .navbar-start > a.navbar-item:focus, body.booberry .navbar.is-link .navbar-start > a.navbar-item:hover, body.booberry .navbar.is-link .navbar-start > a.navbar-item.is-active,
 body.booberry .navbar.is-link .navbar-start .navbar-link:focus,
@@ -10429,22 +10446,22 @@ body.booberry .navbar.is-link .navbar-end > a.navbar-item.is-active,
 body.booberry .navbar.is-link .navbar-end .navbar-link:focus,
 body.booberry .navbar.is-link .navbar-end .navbar-link:hover,
 body.booberry .navbar.is-link .navbar-end .navbar-link.is-active {
-    background-color: #e5e5e5;
-    color: rgba(0, 0, 0, 0.7);
+    background-color: #6533ab;
+    color: #fff;
   }
   body.booberry .navbar.is-link .navbar-start .navbar-link::after,
 body.booberry .navbar.is-link .navbar-end .navbar-link::after {
-    border-color: rgba(0, 0, 0, 0.7);
+    border-color: #fff;
   }
   body.booberry .navbar.is-link .navbar-item.has-dropdown:focus .navbar-link,
 body.booberry .navbar.is-link .navbar-item.has-dropdown:hover .navbar-link,
 body.booberry .navbar.is-link .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #e5e5e5;
-    color: rgba(0, 0, 0, 0.7);
+    background-color: #6533ab;
+    color: #fff;
   }
   body.booberry .navbar.is-link .navbar-dropdown a.navbar-item.is-active {
-    background-color: #f2f2f2;
-    color: rgba(0, 0, 0, 0.7);
+    background-color: #7139bf;
+    color: #fff;
   }
 }
 body.booberry .navbar.is-info {
@@ -10720,7 +10737,7 @@ body.booberry .navbar-tabs {
   overflow-y: hidden;
 }
 body.booberry .navbar-burger {
-  color: #f2f2f2;
+  color: #7139bf;
   cursor: pointer;
   display: block;
   height: 3.25rem;
@@ -10766,7 +10783,7 @@ body.booberry .navbar-menu {
 }
 body.booberry .navbar-item,
 body.booberry .navbar-link {
-  color: #f2f2f2;
+  color: #7139bf;
   display: block;
   line-height: 1.5;
   padding: 0.5rem 0.75rem;
@@ -10786,8 +10803,8 @@ body.booberry .navbar-link:focus,
 body.booberry .navbar-link:focus-within,
 body.booberry .navbar-link:hover,
 body.booberry .navbar-link.is-active {
-  background-color: #0468bf;
-  color: #f2f2f2;
+  background-color: #f2f2f2;
+  color: #f2275d;
 }
 body.booberry .navbar-item {
   flex-grow: 0;
@@ -10810,14 +10827,14 @@ body.booberry .navbar-item.is-tab {
 }
 body.booberry .navbar-item.is-tab:focus, body.booberry .navbar-item.is-tab:hover {
   background-color: transparent;
-  border-bottom-color: #f2f2f2;
+  border-bottom-color: #7139bf;
 }
 body.booberry .navbar-item.is-tab.is-active {
   background-color: transparent;
-  border-bottom-color: #f2f2f2;
+  border-bottom-color: #7139bf;
   border-bottom-style: solid;
   border-bottom-width: 3px;
-  color: #f2f2f2;
+  color: #7139bf;
   padding-bottom: calc(0.5rem - 3px);
 }
 body.booberry .navbar-content {
@@ -10828,7 +10845,7 @@ body.booberry .navbar-link:not(.is-arrowless) {
   padding-right: 2.5em;
 }
 body.booberry .navbar-link:not(.is-arrowless)::after {
-  border-color: #f2f2f2;
+  border-color: #7139bf;
   margin-top: -0.375em;
   right: 1.125em;
 }
@@ -10861,7 +10878,7 @@ body.booberry .navbar-tabs .navbar-item {
     display: none;
   }
   body.booberry .navbar-menu {
-    background-color: #7139bf;
+    background-color: #f2f2f2;
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0;
   }
@@ -10930,11 +10947,11 @@ body.booberry .navbar.is-transparent .navbar-link.is-active {
   }
   body.booberry .navbar.is-transparent .navbar-dropdown a.navbar-item:focus, body.booberry .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
     background-color: #f2f2f2;
-    color: #0a0a0a;
+    color: #f2275d;
   }
   body.booberry .navbar.is-transparent .navbar-dropdown a.navbar-item.is-active {
     background-color: #f2f2f2;
-    color: #f2f2f2;
+    color: #7139bf;
   }
   body.booberry .navbar-burger {
     display: none;
@@ -11001,11 +11018,11 @@ body.booberry .navbar-link {
   }
   body.booberry .navbar-dropdown a.navbar-item:focus, body.booberry .navbar-dropdown a.navbar-item:hover {
     background-color: #f2f2f2;
-    color: #0a0a0a;
+    color: #f2275d;
   }
   body.booberry .navbar-dropdown a.navbar-item.is-active {
     background-color: #f2f2f2;
-    color: #f2f2f2;
+    color: #7139bf;
   }
   .navbar.is-spaced body.booberry .navbar-dropdown, body.booberry .navbar-dropdown.is-boxed {
     border-radius: 6px;
@@ -11074,7 +11091,7 @@ body.booberry .navbar-link.is-active:not(:focus):not(:hover) {
     background-color: transparent;
   }
   body.booberry .navbar-item.has-dropdown:focus .navbar-link, body.booberry .navbar-item.has-dropdown:hover .navbar-link, body.booberry .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #0468bf;
+    background-color: #f2f2f2;
   }
 }
 body.booberry .hero.is-fullheight-with-navbar {
@@ -11524,7 +11541,7 @@ body.booberry .hero.is-fullheight-with-navbar {
 }
 
 .is-family-sans-serif {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Noto Sans", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
 }
 
 .is-family-monospace {
