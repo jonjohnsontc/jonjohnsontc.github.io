@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[883],{9616:function(e,t,r){r.r(t),r.d(t,{default:function(){return n}});var a=r(7294);function n(){return a.createElement("article",{className:"container has-text-centered"},a.createElement("p",{className:"sad-face"},":,("),a.createElement("p",null,"Sorry, the page you're looking for cannot be found"))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-2ab134606fd8dc6a00c2.js.map
