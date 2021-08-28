@@ -1,27 +1,30 @@
-import React from "react"
+import React from "react";
 
 export default function Logo(props) {
-    let colors = [
-        "#EB5757",
-        "#F2C94C",
-        "#27AE60",
-        "#6FCF97",
-        "#2D9CDB",
-        "#56CCF2",
-        "#A041FF",
-        "#F2994A",
-        "#BDBDBD",
-        "#4F4F4F"
-    ];
+  let colors = [
+    "#EB5757",
+    "#F2C94C",
+    "#27AE60",
+    "#6FCF97",
+    "#2D9CDB",
+    "#56CCF2",
+    "#A041FF",
+    "#F2994A",
+    "#BDBDBD",
+    "#4F4F4F",
+  ];
 
-    let color1 = colors[Math.floor(Math.random() * colors.length)] || "#A041FF";
-    let color2 = colors[Math.floor(Math.random() * colors.length)] || "#F2994A";
+  // This controls the fill for the two J's
+  let color1 = colors[Math.floor(Math.random() * colors.length)] || "#A041FF";
+  let color2 = colors[Math.floor(Math.random() * colors.length)] || "#F2994A";
 
-    let width = props.width || "209"
-    let height = props.height || "209"
-    
-    return (
-    <svg
+  let width = props.width || "209";
+  let height = props.height || "209";
+
+  return (
+    <button id="jj">
+      <svg
+        className="logo"
         xmlns="http://www.w3.org/2000/svg"
         width={width}
         height={height}
@@ -29,7 +32,9 @@ export default function Logo(props) {
         viewBox="0 0 209 209"
       >
         <g filter="url(#filter0_d)">
-          <circle cx="104.5" cy="100.5" r="100.5" fill="#f9f5d7"></circle>
+          
+          {/* TODO: I'm no longer using the circle. I should probably delete it */}
+          <circle cx="104.5" cy="100.5" r="100.5"></circle>
         </g>
         <path
           fill="url(#paint0_linear)"
@@ -76,5 +81,6 @@ export default function Logo(props) {
           </linearGradient>
         </defs>
       </svg>
-    );
-  }
+    </button>
+  );
+}
