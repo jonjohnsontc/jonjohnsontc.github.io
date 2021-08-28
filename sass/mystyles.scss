@@ -22,6 +22,7 @@ body {
   $purple: #b16286;
   $red: #cc241d;
   $grey-dark: hsl(0, 0%, 29%);
+  $primary: $purple;
   $navbar-background-color: $white-ter;
 
   $container-max-width: 800px;
@@ -48,34 +49,6 @@ body {
     overflow-y: auto;
   }
 
-  // TODO: Figure out if I want to keep this around
-  // Not currently being used
-  #nav {
-    background-color: $grey-darker;
-    height: 4rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    .nav-item {
-      display: inline;
-      font-size: 2rem;
-      .nav-link {
-        display: inline-block;
-        padding: 10px;
-        &:hover {
-          text-decoration: underline 3px;
-        }
-      }
-      .nav-active-link {
-        display: inline-block;
-        padding: 10px;
-        text-decoration: underline 3px;
-        color: $red;
-      }
-    }
-  }
-
   .nav-active-link {
     text-underline-offset: 0.3em;
     text-decoration: underline 3px;
@@ -83,8 +56,16 @@ body {
   }
 
   .nav-button {
+    color: $primary;
+    &:hover {
+      color: $red;
+    }
+  }
+
+  .nav-ally {
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
   
   .bi {
@@ -134,6 +115,10 @@ body {
 
   .blog-list-box {
     border-top: 1px solid $grey-darker;
+  }
+
+  .blog-date {
+    font-style: italic;
   }
 
   //////////////////////////
@@ -199,6 +184,7 @@ body.booberry {
   $purple: $color-theme_booberry-2-hex;
   $red: $color-theme_booberry-1-hex;
   $grey-dark: hsl(0, 0%, 29%);
+  $primary: $purple;
   $navbar-background-color: $white-ter;
 
   $container-max-width: 800px;
@@ -252,8 +238,10 @@ body.booberry {
   }
 
   .nav-button {
-    background-color: transparent;
-    border: none;
+    color: $primary;
+    &:hover {
+      color: $red;
+    }
   }
 
   .navbar-item > a {

@@ -24,9 +24,9 @@ function AboutMe() {
         <li className={`pb-2`}>May 12th, 1988</li>
         <li className={`has-text-weight-bold`}>Currently Resides In:</li>
         <li className={`pb-2`}>Los Angeles, CA</li>
-        <li className={`has-text-weight-bold`}>Crew Includes:</li>
-        <li className={`pb-2`}>Two Cats</li>
-        <li className={`py-2`}>
+        <li className={`has-text-weight-bold`}>Check Me Out On:</li>
+        <li className={`pb-2`}> <a href="https://github.com/jonjohnsontc">Github</a></li>
+        <li className={`py-2`}> 
           <a href="mailto:jonjohnsontc@live.com">Get in touch! 👋🏽</a>
         </li>
       </ul>
@@ -49,6 +49,7 @@ function AboutMe() {
         </li>
         <hr />
         <li className={`is-size-3 py-3`}>About the Content on This Site</li>
+        <li className={`pb-3`}>This website was built with <a href="https://www.gatsbyjs.com">Gatsby</a>. CSS is powered by <a href="https://www.bulma.io">Bulma</a>.</li>
         <li className={`pb-3`}>If you're interested in figuring out how it's built, you can find the source <a href="https://github.com/jonjohnsontc/jonjohnsontc.github.io">here</a></li>
       </ul>
     </article>

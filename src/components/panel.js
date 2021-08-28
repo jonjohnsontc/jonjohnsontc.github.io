@@ -45,7 +45,7 @@ function Navbar() {
   const toggleClass = () => {
     setActive(!isActive);
   };
-  let navbarBurgerClasses = `navbar-burger`;
+  let navbarBurgerClasses = `navbar-burger nav-ally`;
   return (
     <nav
       className={`navbar is-family-sans-serif`}
@@ -56,8 +56,7 @@ function Navbar() {
         <div className={`navbar-item`}>
           <HomeLink name="JON JOHNSON" link="/" onClick={toggleClass} />
         </div>
-        <a
-          role="button"
+        <button
           className={
             isActive ? navbarBurgerClasses : navbarBurgerClasses + ` is-active`
           }
@@ -68,7 +67,7 @@ function Navbar() {
           <span className={`has-text-link`} aria-hidden="true"></span>
           <span className={`has-text-link`} aria-hidden="true"></span>
           <span className={`has-text-link`} aria-hidden="true"></span>
-        </a>
+        </button>
       </div>
       <div
         className={isActive ? `navbar-menu` : `navbar-menu is-active`}
@@ -88,34 +87,34 @@ function Navbar() {
             className={`navbar-item has-dropdown is-hoverable`}
             role="navigation"
           >
-            <a className={`navbar-link is-size-2`}>
+            <button className={`navbar-link is-size-2 nav-ally`}>
               <span>
                 <Palette />
               </span>
-            </a>
+            </button>
             <div className={`navbar-dropdown`}>
               <div className={`navbar-item`}>
-                <a
-                  className={`is-size-5`}
+                <button
+                  className={`is-size-5 nav-ally nav-button`}
                   onClick={() => {
                     changeBodyClass("");
                     setActive(!isActive);
                   }}
                 >
                   Gruvbox
-                </a>
+                </button>
               </div>
               <hr className={`navbar-divider`} />
               <div className={`navbar-item`}>
-                <a
-                  className={`is-size-5`}
+                <button
+                  className={`is-size-5 nav-ally nav-button`}
                   onClick={() => {
                     changeBodyClass("booberry");
                     setActive(!isActive);
                   }}
                 >
                   Booberry
-                </a>
+                </button>
               </div>
             </div>
           </div>

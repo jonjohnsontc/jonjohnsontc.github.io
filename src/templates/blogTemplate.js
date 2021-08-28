@@ -19,7 +19,7 @@ export default function Template({ data }) {
         </div>
       </div>
       
-      <span>{frontmatter.date}</span>
+      <span className={`blog-date`}>Published on: {frontmatter.date}</span>
       <div
         className={`blog-post-content mt-3`}
         dangerouslySetInnerHTML={{ __html: html }}

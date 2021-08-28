@@ -102,7 +102,7 @@ export default function Stuff({ data }) {
     <p className={`title is-size-1 has-text-centered`}>Stuff</p>
   );
   const stuffPrompt = (
-    <p>
+    <p className={`is-size-4`}>
       Here's some side-projects that I've worked on.
     </p>
   );

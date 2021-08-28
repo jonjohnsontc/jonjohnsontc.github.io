@@ -9,7 +9,7 @@ export function Palette() {
         return "#7139bf"
   }} else {
     return "#d3869b"
-  }})
+  }}, [])
   
   const svg = (
     <svg
