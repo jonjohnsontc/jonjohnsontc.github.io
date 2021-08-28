@@ -41,7 +41,7 @@ function Navbar() {
     }
   };
 
-  const [isActive, setActive] = React.useState(false);
+  const [isActive, setActive] = React.useState(true);
   const toggleClass = () => {
     setActive(!isActive);
   };
