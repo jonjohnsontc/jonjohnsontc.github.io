@@ -1,6 +1,7 @@
 import { Link } from "@reach/router";
 import { graphql } from "gatsby";
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Splash } from "../../components/page";
 
 function BlogListItem(props) {
@@ -30,6 +31,8 @@ export const blogQuery = graphql`
   }
 `;
 
+const title = <Helmet><title>Blog | JonJ.io</title></Helmet>
+
 export default function Blog({ data }) {
   const { allMarkdownRemark } = data;
   const { nodes } = allMarkdownRemark;
@@ -45,6 +48,7 @@ export default function Blog({ data }) {
 
   return (
     <>
+    {title}
     <Splash logo={blogTitle} prompt={blogPrompt}/>
     <div className={`container blog mt-6`}>
       {nodes.map(node => (

@@ -1,6 +1,7 @@
 import { graphql } from "gatsby";
 import React, { useState } from "react";
 import { Splash } from "../../components/page";
+import { Helmet } from "react-helmet";
 
 export const stuffQuery = graphql`
   query StuffQuery {
@@ -33,6 +34,12 @@ function Carousel(props) {
     </>
   );
 }
+
+const title = (
+  <Helmet>
+    <title>Stuff I've Made | JonJ.io</title>
+  </Helmet>
+);
 
 export default function Stuff({ data }) {
   const nodes = data.allMarkdownRemark.nodes;
@@ -111,6 +118,7 @@ export default function Stuff({ data }) {
   // and layouts > 800px wide
   const allTheStuff = (
     <>
+      {title}
       <Splash logo={stuffTitle} prompt={stuffPrompt} />
       <div className={`columns is-centered mt-6`}>
         <div className={`column is-flex is-justify-content-flex-end`}>
@@ -154,6 +162,7 @@ export default function Stuff({ data }) {
     if (window.innerWidth <= 800) {
       return (
         <>
+          {title}
           <Splash logo={stuffTitle} prompt={stuffPrompt} />
           <div className={`columns is-centered is-vcentered mt-6`}>
             <div className={`column is-half`}>

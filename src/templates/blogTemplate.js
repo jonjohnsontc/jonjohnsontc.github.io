@@ -1,11 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  const title = <Helmet><title>{frontmatter.title} | JonJ.io</title></Helmet>
 
   return (
     <div className={`blog-post-container container`}>
+      {title}
       <div className={`blog-post hero is-medium has-background-grey-darker`}>
         {/* We render a blank hero-body, and hero-foot with text to 
         give the title at bottom look */}
