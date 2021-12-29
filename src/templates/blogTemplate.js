@@ -1,14 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Helmet } from "react-helmet";
+import SEO from "../components/seo";
+
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  const title = <Helmet><title>{frontmatter.title} | JonJ.io</title></Helmet>
 
   return (
     <div className={`blog-post-container container`}>
-      {title}
+      <SEO title={`${frontmatter.title} | JonJ.io`} article={true} />
       <div className={`blog-post hero is-medium has-background-grey-darker`}>
         {/* We render a blank hero-body, and hero-foot with text to 
         give the title at bottom look */}
@@ -21,7 +21,7 @@ export default function Template({ data }) {
           </p>
         </div>
       </div>
-      
+
       <span className={`blog-date`}>Published on: {frontmatter.date}</span>
       <div
         className={`blog-post-content mt-3`}
