@@ -2,7 +2,6 @@ import React from "react";
 import { Splash } from "../components/page";
 import Logo from "../components/logo";
 import { Helmet } from "react-helmet";
-import SEO from "../components/seo";
 
 function Greeting(props) {
   let greeting = props.greeting || "Hi, I'm Jon :0)";

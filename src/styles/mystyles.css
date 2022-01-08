@@ -78,6 +78,9 @@ body .blog-list-box {
 body .blog-date {
   font-style: italic;
 }
+body .blog-post-content {
+  font-size: 1.25rem;
+}
 body .stuff-button {
   background-color: transparent;
   border: none;
@@ -373,7 +376,7 @@ body th:not([align]) {
 }
 body html {
   background-color: #f9f5d7;
-  font-size: 16px;
+  font-size: 18px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -1633,22 +1636,22 @@ body .container.is-fluid {
 }
 @media screen and (max-width: 1215px) {
   body .container.is-widescreen:not(.is-max-desktop) {
-    max-width: 736px;
+    max-width: 936px;
   }
 }
 @media screen and (max-width: 1407px) {
   body .container.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
-    max-width: 736px;
+    max-width: 936px;
   }
 }
 @media screen and (min-width: 1216px) {
   body .container:not(.is-max-desktop) {
-    max-width: 736px;
+    max-width: 936px;
   }
 }
 @media screen and (min-width: 1408px) {
   body .container:not(.is-max-desktop):not(.is-max-widescreen) {
-    max-width: 736px;
+    max-width: 936px;
   }
 }
 body .content li + li {
@@ -11623,7 +11626,7 @@ th:not([align]) {
 
 html {
   background-color: white;
-  font-size: 16px;
+  font-size: 18px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
