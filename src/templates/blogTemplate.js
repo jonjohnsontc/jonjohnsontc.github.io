@@ -1,7 +1,13 @@
 import React from "react";
+import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import CodeBlock from "../components/CodeBlock";
 import { graphql } from "gatsby";
 import SEO from "../components/seo";
+
+const components = {
+  pre: CodeBlock
+}
 
 export default function Template({ data }) {
   const { mdx } = data;
@@ -24,8 +30,10 @@ export default function Template({ data }) {
       </div>
 
       <span className={`blog-date`}>Published on: {frontmatter.date}</span>
-
-      <MDXRenderer>{body}</MDXRenderer>
+      
+      <MDXProvider components={components}>
+        <MDXRenderer>{body}</MDXRenderer>
+      </MDXProvider>
 
       <footer
         className="footer is-flex is-justify-content-center"
@@ -39,6 +47,7 @@ export default function Template({ data }) {
     </article>
   );
 }
+
 export const pageQuery = graphql`
   query($id: String!) {
     mdx(id: { eq: $id }) {

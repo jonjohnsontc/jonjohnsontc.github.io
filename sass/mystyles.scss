@@ -47,14 +47,6 @@ body {
   $navbar-item-color: $link;
   $navbar-item-hover-background-color: $white-ter;
 
-  pre {
-    background-color: $grey-dark !important;
-    code {
-      background-color: transparent !important;
-      color: white !important;
-    }
-  }
-
   .app {
     background-color: $white-ter;
     width: 100vw;
@@ -241,14 +233,6 @@ body.booberry {
   code {
     background-color: transparent;
     color: $red;
-  }
-
-  pre {
-    background-color: $grey-dark;
-    code {
-      background-color: transparent;
-      color: $white;
-    }
   }
 
   #jj {
