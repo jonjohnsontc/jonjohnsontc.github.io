@@ -12,6 +12,16 @@ $family-sans-serif: "Noto Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
   "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $body-size: 18px;
 
+.gatsby-highlight-code-line {
+  background-color: #feb;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+
 body {
   // Global vars
   // Bulma colors
@@ -36,14 +46,6 @@ body {
   $footer-background-color: $white-ter;
   $navbar-item-color: $link;
   $navbar-item-hover-background-color: $white-ter;
-
-  pre {
-    background-color: $grey-dark !important;
-    code {
-      background-color: transparent !important;
-      color: white !important;
-    }
-  }
 
   .app {
     background-color: $white-ter;
@@ -108,10 +110,22 @@ body {
     align-items: center;
   }
 
+  .bio {
+    font-size: 1.25rem;
+  }
+
   //////////////////////////
   // blog page elements //
   /////////////////////////
 
+  .anchor {
+    &:hover {
+      &::after {
+        content: "#";
+        margin-left: 20px;
+      }
+    }
+  }
   .blog {
     border-bottom: 1px solid $grey-darker;
   }
@@ -126,6 +140,11 @@ body {
 
   .blog-post-content {
     font-size: 1.25rem;
+  }
+
+  .blog-title {
+    font-size: 2rem;
+    color: #4a4a4a;
   }
 
   //////////////////////////
@@ -214,14 +233,6 @@ body.booberry {
   code {
     background-color: transparent;
     color: $red;
-  }
-
-  pre {
-    background-color: $grey-dark;
-    code {
-      background-color: transparent;
-      color: $white;
-    }
   }
 
   #jj {

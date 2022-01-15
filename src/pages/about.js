@@ -22,7 +22,7 @@ const title = (
 
 function AboutMe() {
   const statLine = (
-    <article className={`ml-2`}>
+    <article className={`ml-2 bio`}>
       <p className={`title`}>Stats</p>
       <ul>
         <li className={`has-text-weight-bold`}>Birthdate:</li>
@@ -42,7 +42,7 @@ function AboutMe() {
   );
 
   const selectBio = (
-    <article className={`has-text-centered`}>
+    <article className={`has-text-centered bio`}>
       <ul>
         <hr />
         <li className={`is-size-3 py-3`}>About Me</li>

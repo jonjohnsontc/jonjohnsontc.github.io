@@ -19,7 +19,7 @@ function BlogListItem(props) {
 
 export const blogQuery = graphql`
   query MyQuery {
-    allMarkdownRemark(filter: { frontmatter: { slug: { ne: "/stuff/" } } }) {
+    allMdx(filter: { frontmatter: { slug: { ne: "/stuff/" } } }) {
       nodes {
         frontmatter {
           title
@@ -31,35 +31,43 @@ export const blogQuery = graphql`
   }
 `;
 
-const title = <Helmet><title>Blog | JonJ.io</title></Helmet>
+const title = (
+  <Helmet>
+    <title>Blog | Jon Johnson</title>
+  </Helmet>
+);
 
 export default function Blog({ data }) {
-  const { allMarkdownRemark } = data;
-  const { nodes } = allMarkdownRemark;
+  const { allMdx } = data;
+  const { nodes } = allMdx;
 
   // Sorting nodes by date
   // TODO: push this to graphql if you use mdx
   nodes.sort((a, b) => (a.frontmatter.date < b.frontmatter.date ? 1 : -1));
 
-  const blogTitle = <h1 className={`title is-size-1 has-text-centered`}>Blog</h1>
+  const blogTitle = (
+    <h1 className={`title is-size-1 has-text-centered`}>Blog</h1>
+  );
   const blogPrompt = (
-    <h2 className={`is-size-4 has-text-centered`}>Standard issue blog fare served fresh</h2>
-  )
+    <h2 className={`is-size-4 has-text-centered`}>
+      Standard issue blog fare served fresh
+    </h2>
+  );
 
   return (
     <>
-    {title}
-    <Splash logo={blogTitle} prompt={blogPrompt}/>
-    <div className={`container blog mt-6`}>
-      {nodes.map(node => (
-        <BlogListItem
-          key={node.frontmatter.slug}
-          title={node.frontmatter.title}
-          date={node.frontmatter.date}
-          link={node.frontmatter.slug}
-        />
-      ))}
-    </div>
+      {title}
+      <Splash logo={blogTitle} prompt={blogPrompt} />
+      <div className={`container blog mt-6`}>
+        {nodes.map(node => (
+          <BlogListItem
+            key={node.frontmatter.slug}
+            title={node.frontmatter.title}
+            date={node.frontmatter.date}
+            link={node.frontmatter.slug}
+          />
+        ))}
+      </div>
     </>
   );
 }

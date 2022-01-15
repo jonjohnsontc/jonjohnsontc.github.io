@@ -1,14 +1,21 @@
 import React from "react";
+import { MDXProvider } from "@mdx-js/react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import CodeBlock from "../components/codeBlock";
 import { graphql } from "gatsby";
 import SEO from "../components/seo";
 
+const components = {
+  pre: CodeBlock
+}
+
 export default function Template({ data }) {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { mdx } = data;
+  const { frontmatter, body } = mdx;
 
   return (
-    <div className={`blog-post-container container`}>
-      <SEO title={`${frontmatter.title} | JonJ.io`} article={true} />
+    <article className={`blog-post-container blog-post-content container`}>
+      <SEO title={`${frontmatter.title} | Jon Johnson`} article={true} />
       <div className={`blog-post hero is-medium has-background-grey-darker`}>
         {/* We render a blank hero-body, and hero-foot with text to 
         give the title at bottom look */}
@@ -23,10 +30,11 @@ export default function Template({ data }) {
       </div>
 
       <span className={`blog-date`}>Published on: {frontmatter.date}</span>
-      <div
-        className={`blog-post-content mt-3`}
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      
+      <MDXProvider components={components}>
+        <MDXRenderer>{body}</MDXRenderer>
+      </MDXProvider>
+
       <footer
         className="footer is-flex is-justify-content-center"
         children={
@@ -36,13 +44,14 @@ export default function Template({ data }) {
           </span>
         }
       />
-    </div>
+    </article>
   );
 }
+
 export const pageQuery = graphql`
   query($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+    mdx(id: { eq: $id }) {
+      body
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         slug

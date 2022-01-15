@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -21,7 +21,9 @@
     "gatsby-plugin-mdx": "latest",
     "gatsby-plugin-react-helmet": "latest",
     "gatsby-source-filesystem": "latest",
-    "gatsby-transformer-remark": "latest",
+    "gatsby-transformer-remark": "^5.4.0",
+    "prism-react-renderer": "^1.2.1",
+    "prismjs": "^1.26.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0"
