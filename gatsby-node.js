@@ -1,8 +1,8 @@
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
-
   const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`);
 
+  // Initial Blog Template
   return graphql(`
     {
       allMdx(
@@ -38,4 +38,6 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
   });
+// 
+
 };
