@@ -319,7 +319,7 @@ body {
   .stuff-image {
     border-bottom: 3px dotted $grey-darker;
   }
-  @import "/Users/jonjohnson/dev/bulma/bulma.sass";
+  @import "./bulma/bulma.sass";
 }
 /*
 
@@ -507,12 +507,12 @@ body.booberry {
     background-color: $white-ter;
   }
 
-  @import "/Users/jonjohnson/dev/bulma/sass/helpers/color.sass";
-  @import "/Users/jonjohnson/dev/bulma/sass/utilities/initial-variables.sass";
-  @import "/Users/jonjohnson/dev/bulma/sass/utilities/derived-variables.sass";
-  @import "/Users/jonjohnson/dev/bulma/sass/components/navbar.sass";
+  @import "./bulma/sass/helpers/color.sass";
+  @import "./bulma/sass/utilities/initial-variables.sass";
+  @import "./bulma/sass/utilities/derived-variables.sass";
+  @import "./bulma/sass/components/navbar.sass";
 }
 
-@import "/Users/jonjohnson/dev/bulma/sass/utilities/initial-variables.sass";
-@import "/Users/jonjohnson/dev/bulma/sass/helpers/typography.sass";
-@import "/Users/jonjohnson/dev/bulma/sass/base/_all";
+@import "./bulma/sass/utilities/initial-variables.sass";
+@import "./bulma/sass/helpers/typography.sass";
+@import "./bulma/sass/base/_all";
