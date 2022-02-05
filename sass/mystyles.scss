@@ -1,4 +1,5 @@
 @charset "utf-8";
+@use "sass:math";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 
@@ -12,6 +13,42 @@ $family-sans-serif: "Noto Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
   "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $body-size: 18px;
 
+$rainbow-diameter: 800px;
+$rainbow-thickness: 200px;
+$animation-duration: 4.5s;
+$rainbow-filter: hue-rotate(-15deg) contrast(95%);
+$rainbow-opacity: 1;
+$rainbow-colours: #ff0000,
+// red
+#ff7f00,
+// orange
+#ffff00,
+// yellow
+#00ff00,
+// green
+#0000ff,
+// blue
+#4b0082,
+// indigo
+#9400d3; // violet;
+
+// Leave these alone
+$rainbow-radius: math.div($rainbow-diameter, 2);
+$colour-band-width: math.div($rainbow-thickness, length($rainbow-colours));
+
+@mixin rainbow($type) {
+  &::before {
+    content: '';
+    position: absolute;
+    width: $rainbow-diameter;
+    height: $rainbow-diameter;
+    filter: $rainbow-filter;
+    opacity: $rainbow-opacity;
+    border-radius: 50%;
+    @include rainbowGradient($type);
+  }
+}
+
 .gatsby-highlight-code-line {
   background-color: #feb;
   display: block;
@@ -22,6 +59,21 @@ $body-size: 18px;
   border-left: 0.25em solid #f99;
 }
 
+// Wipe animation
+@keyframes wipe {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(180deg); }
+  70% { transform: rotate(180deg); }
+  90% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+/*
+
+
+THEME 1 - GRUVBOX
+
+
+*/ 
 body {
   // Global vars
   // Bulma colors
@@ -47,6 +99,88 @@ body {
   $navbar-item-color: $link;
   $navbar-item-hover-background-color: $white-ter;
 
+  @mixin rainbowGradient($type) {
+    // Base gradient
+    $rainbow-gradient: circle at center, transparent,
+      transparent $rainbow-radius - $rainbow-thickness,
+      nth($rainbow-colours, -1) $rainbow-radius - $rainbow-thickness;
+  
+    // Generate banded or smooth radial gradient
+    @for $i from 1 through length($rainbow-colours) {
+      $colour: nth($rainbow-colours, -$i);
+  
+      $rainbow-gradient: append(
+        $rainbow-gradient,
+        $colour
+          $rainbow-radius -
+          (
+            $rainbow-thickness -
+              if(
+                $type == "smooth",
+                $colour-band-width +
+                  math.div($colour-band-width, (length($rainbow-colours))),
+                $colour-band-width
+              ) *
+              ($i - 1)
+          )
+      );
+  
+      @if($type == "bands") {
+          $rainbow-gradient: append(
+            $rainbow-gradient,
+            $colour $rainbow-radius - ($rainbow-thickness - $colour-band-width * $i)
+          );
+        }
+    }
+    background: radial-gradient($rainbow-gradient);
+  }
+
+  @mixin rainbow($type) {
+    &::before {
+      content: '';
+      position: absolute;
+      width: $rainbow-diameter;
+      height: $rainbow-diameter;
+      filter: $rainbow-filter;
+      opacity: $rainbow-opacity;
+      border-radius: 50%;
+      @include rainbowGradient($type);
+    }
+  }
+
+  .rainbow {
+    width: $rainbow-diameter;
+    height: $rainbow-radius;
+    margin: 0px;
+    position: relative;
+    overflow: hidden;
+    @include rainbow("smooth");
+  
+    // Rainbow classes
+    &.bands { @include rainbow("bands"); }
+    &.smooth { @include rainbow("smooth"); }
+    
+    // Animation element
+    &::after {
+      content: '';
+      position: absolute;
+      transform-origin: $rainbow-radius $rainbow-radius;
+      width: $rainbow-diameter;
+      height: $rainbow-radius;
+      background-color: $white-ter;
+      animation: wipe $animation-duration ease-in-out infinite;
+    }
+  
+  }
+
+  @media (prefers-reduced-motion) {
+    .rainbow {
+      &::after{
+        animation: none;
+        background-color: transparent;
+      }
+    }
+  }
   .app {
     background-color: $white-ter;
     width: 100vw;
@@ -136,6 +270,7 @@ body {
 
   .blog-date {
     font-style: italic;
+    padding-bottom: 2rem;
   }
 
   .blog-post-content {
@@ -186,7 +321,13 @@ body {
   }
   @import "/Users/jonjohnson/dev/bulma/bulma.sass";
 }
+/*
 
+
+THEME 2 - BOOBERRY
+
+
+*/ 
 body.booberry {
   /* Color Theme Swatches in Hex */
   // Initially derived from an adobe color extraction
@@ -221,6 +362,89 @@ body.booberry {
   $navbar-item-hover-color: $red;
   $navbar-dropdown-item-hover-color: $red;
   $navbar-item-hover-background-color: $white-ter;
+
+  @mixin rainbowGradient($type) {
+    // Base gradient
+    $rainbow-gradient: circle at center, transparent,
+      transparent $rainbow-radius - $rainbow-thickness,
+      nth($rainbow-colours, -1) $rainbow-radius - $rainbow-thickness;
+  
+    // Generate banded or smooth radial gradient
+    @for $i from 1 through length($rainbow-colours) {
+      $colour: nth($rainbow-colours, -$i);
+  
+      $rainbow-gradient: append(
+        $rainbow-gradient,
+        $colour
+          $rainbow-radius -
+          (
+            $rainbow-thickness -
+              if(
+                $type == "smooth",
+                $colour-band-width +
+                  math.div($colour-band-width, (length($rainbow-colours))),
+                $colour-band-width
+              ) *
+              ($i - 1)
+          )
+      );
+  
+      @if($type == "bands") {
+          $rainbow-gradient: append(
+            $rainbow-gradient,
+            $colour $rainbow-radius - ($rainbow-thickness - $colour-band-width * $i)
+          );
+        }
+    }
+    background: radial-gradient($rainbow-gradient);
+  }
+
+  @mixin rainbow($type) {
+    &::before {
+      content: '';
+      position: absolute;
+      width: $rainbow-diameter;
+      height: $rainbow-diameter;
+      filter: $rainbow-filter;
+      opacity: $rainbow-opacity;
+      border-radius: 50%;
+      @include rainbowGradient($type);
+    }
+  }
+
+  
+  .rainbow {
+    width: $rainbow-diameter;
+    height: $rainbow-radius;
+    margin: 0px;
+    position: relative;
+    overflow: hidden;
+    @include rainbow("smooth");
+  
+    // Rainbow classes
+    &.bands { @include rainbow("bands"); }
+    &.smooth { @include rainbow("smooth"); }
+    
+    // Animation element
+    &::after {
+      position: absolute;
+      transform-origin: $rainbow-radius $rainbow-radius;
+      width: $rainbow-diameter;
+      height: $rainbow-radius;
+      background-color: $white-ter;
+      animation: wipe $animation-duration ease-in-out infinite; }
+  
+  }
+
+  @media (prefers-reduced-motion) {
+    .rainbow {
+      &::after{
+        animation: none;
+        background-color: transparent;
+      }
+    }
+  }
+
 
   hr {
     background-color: $white-ter;
