@@ -1,4 +1,4 @@
-import "./src/styles/mystyles.css"
+import "./sass/mystyles.scss"
 
 import React from "react"
 import Panel from "./src/components/panel"
