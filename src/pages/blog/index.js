@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { Splash } from "../../components/page";
 
 function BlogListItem(props) {
+
   return (
     <div className={`blog-list-box block`}>
       <ul className={`level`}>
