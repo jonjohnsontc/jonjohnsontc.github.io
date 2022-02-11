@@ -1,4 +1,4 @@
-import "./src/styles/mystyles.css";
+import "./sass/mystyles.scss";
 import "prismjs/themes/prism-tomorrow.css";
 
 import React from "react";
