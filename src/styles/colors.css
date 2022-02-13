@@ -1,0 +1,33 @@
+/* 
+    TODO:
+        My hope is that if I just change the class tied to the body in any given page,
+        it will update the colors accordingly.
+
+*/
+
+body {
+  --white-ter: #fbf1c7;
+  --white: #f9f5d7;
+  --turquoise: #458588;
+  --green: #98971a;
+  --grey-darker: #504945;
+  --cyan: #076678;
+  --yellow: #d79921;
+  --purple: #b16286;
+  --red: #cc241d;
+  --grey-dark: hsl(0, 0%, 29%);
+  --primary: var(--purple);
+}
+
+body.booberry {
+  --white-ter: #fbf1c7;
+  --white: #f9f5d7;
+  --turquoise: #458588;
+  --green: #98971a;
+  --grey-darker: #504945;
+  --cyan: #076678;
+  --yellow: #d79921;
+  --purple: #b16286;
+  --red: #cc241d;
+  --grey-dark: hsl(0, 0%, 29%);
+}

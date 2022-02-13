@@ -19,18 +19,18 @@ $animation-duration: 4.5s;
 $rainbow-filter: hue-rotate(-15deg) contrast(95%);
 $rainbow-opacity: 1;
 $rainbow-colours: #ff0000,
-// red
-#ff7f00,
-// orange
-#ffff00,
-// yellow
-#00ff00,
-// green
-#0000ff,
-// blue
-#4b0082,
-// indigo
-#9400d3; // violet;
+  // red
+  #ff7f00,
+  // orange
+  #ffff00,
+  // yellow
+  #00ff00,
+  // green
+  #0000ff,
+  // blue
+  #4b0082,
+  // indigo
+  #9400d3; // violet;
 
 // Leave these alone
 $rainbow-radius: math.div($rainbow-diameter, 2);
@@ -38,7 +38,7 @@ $colour-band-width: math.div($rainbow-thickness, length($rainbow-colours));
 
 @mixin rainbow($type) {
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: $rainbow-diameter;
     height: $rainbow-diameter;
@@ -61,11 +61,21 @@ $colour-band-width: math.div($rainbow-thickness, length($rainbow-colours));
 
 // Wipe animation
 @keyframes wipe {
-  0% { transform: rotate(0deg); }
-  20% { transform: rotate(180deg); }
-  70% { transform: rotate(180deg); }
-  90% { transform: rotate(360deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(180deg);
+  }
+  70% {
+    transform: rotate(180deg);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 /*
 
@@ -73,7 +83,7 @@ $colour-band-width: math.div($rainbow-thickness, length($rainbow-colours));
 THEME 1 - GRUVBOX
 
 
-*/ 
+*/
 body {
   // Global vars
   // Bulma colors
@@ -104,11 +114,11 @@ body {
     $rainbow-gradient: circle at center, transparent,
       transparent $rainbow-radius - $rainbow-thickness,
       nth($rainbow-colours, -1) $rainbow-radius - $rainbow-thickness;
-  
+
     // Generate banded or smooth radial gradient
     @for $i from 1 through length($rainbow-colours) {
       $colour: nth($rainbow-colours, -$i);
-  
+
       $rainbow-gradient: append(
         $rainbow-gradient,
         $colour
@@ -124,20 +134,22 @@ body {
               ($i - 1)
           )
       );
-  
-      @if($type == "bands") {
-          $rainbow-gradient: append(
-            $rainbow-gradient,
-            $colour $rainbow-radius - ($rainbow-thickness - $colour-band-width * $i)
-          );
-        }
+
+      @if ($type == "bands") {
+        $rainbow-gradient: append(
+          $rainbow-gradient,
+          $colour
+            $rainbow-radius -
+            ($rainbow-thickness - $colour-band-width * $i)
+        );
+      }
     }
     background: radial-gradient($rainbow-gradient);
   }
 
   @mixin rainbow($type) {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: $rainbow-diameter;
       height: $rainbow-diameter;
@@ -155,14 +167,18 @@ body {
     position: relative;
     overflow: hidden;
     @include rainbow("smooth");
-  
+
     // Rainbow classes
-    &.bands { @include rainbow("bands"); }
-    &.smooth { @include rainbow("smooth"); }
-    
+    &.bands {
+      @include rainbow("bands");
+    }
+    &.smooth {
+      @include rainbow("smooth");
+    }
+
     // Animation element
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       transform-origin: $rainbow-radius $rainbow-radius;
       width: $rainbow-diameter;
@@ -170,12 +186,11 @@ body {
       background-color: $white-ter;
       animation: wipe $animation-duration ease-in-out infinite;
     }
-  
   }
 
   @media (prefers-reduced-motion) {
     .rainbow {
-      &::after{
+      &::after {
         animation: none;
         background-color: transparent;
       }
@@ -201,6 +216,7 @@ body {
     }
   }
 
+  // Why is this an `ally` class?
   .nav-ally {
     background-color: transparent;
     border: none;
@@ -327,7 +343,7 @@ body {
 THEME 2 - BOOBERRY
 
 
-*/ 
+*/
 body.booberry {
   /* Color Theme Swatches in Hex */
   // Initially derived from an adobe color extraction
@@ -368,11 +384,11 @@ body.booberry {
     $rainbow-gradient: circle at center, transparent,
       transparent $rainbow-radius - $rainbow-thickness,
       nth($rainbow-colours, -1) $rainbow-radius - $rainbow-thickness;
-  
+
     // Generate banded or smooth radial gradient
     @for $i from 1 through length($rainbow-colours) {
       $colour: nth($rainbow-colours, -$i);
-  
+
       $rainbow-gradient: append(
         $rainbow-gradient,
         $colour
@@ -388,20 +404,22 @@ body.booberry {
               ($i - 1)
           )
       );
-  
-      @if($type == "bands") {
-          $rainbow-gradient: append(
-            $rainbow-gradient,
-            $colour $rainbow-radius - ($rainbow-thickness - $colour-band-width * $i)
-          );
-        }
+
+      @if ($type == "bands") {
+        $rainbow-gradient: append(
+          $rainbow-gradient,
+          $colour
+            $rainbow-radius -
+            ($rainbow-thickness - $colour-band-width * $i)
+        );
+      }
     }
     background: radial-gradient($rainbow-gradient);
   }
 
   @mixin rainbow($type) {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: $rainbow-diameter;
       height: $rainbow-diameter;
@@ -412,7 +430,6 @@ body.booberry {
     }
   }
 
-  
   .rainbow {
     width: $rainbow-diameter;
     height: $rainbow-radius;
@@ -420,11 +437,15 @@ body.booberry {
     position: relative;
     overflow: hidden;
     @include rainbow("smooth");
-  
+
     // Rainbow classes
-    &.bands { @include rainbow("bands"); }
-    &.smooth { @include rainbow("smooth"); }
-    
+    &.bands {
+      @include rainbow("bands");
+    }
+    &.smooth {
+      @include rainbow("smooth");
+    }
+
     // Animation element
     &::after {
       position: absolute;
@@ -432,19 +453,18 @@ body.booberry {
       width: $rainbow-diameter;
       height: $rainbow-radius;
       background-color: $white-ter;
-      animation: wipe $animation-duration ease-in-out infinite; }
-  
+      animation: wipe $animation-duration ease-in-out infinite;
+    }
   }
 
   @media (prefers-reduced-motion) {
     .rainbow {
-      &::after{
+      &::after {
         animation: none;
         background-color: transparent;
       }
     }
   }
-
 
   hr {
     background-color: $white-ter;

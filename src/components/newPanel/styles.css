@@ -1,0 +1,28 @@
+/* 
+
+Panel Styles Wishlist:
+
+- I want the panel to utilize the global styles in the base styles file
+- I want to pull colors from the colors css file
+
+*/
+@import "../../styles/base.css";
+@import "../../styles/colors.css";
+
+.nav {
+  display: inline-flex;
+}
+
+.nav-link {
+  color: var(--primary);
+}
+
+.nav-link:hover {
+  color: var(--red);
+}
+
+.nav-active-link {
+  text-underline-offset: 0.3em;
+  text-decoration: underline;
+  color: var(--red);
+}
