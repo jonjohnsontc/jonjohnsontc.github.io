@@ -9,6 +9,28 @@ Panel Styles Wishlist:
 @import "../../styles/base.css";
 @import "../../styles/colors.css";
 
+:root {
+  --arrow-offset: 35%;
+}
+
+@media (min-width: 300px) {
+  :root {
+    --arrow-offset: 68%;
+  }
+}
+
+@media (min-width: 800px) {
+  :root {
+    --arrow-offset: 12%;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --arrow-offset: 10%;
+  }
+}
+
 .nav {
   display: inline-flex;
   min-width: 100vw;
@@ -18,7 +40,7 @@ Panel Styles Wishlist:
 
 .nav > ul > li {
   display: inline-flex;
-  padding: 1em 1em;
+  padding: 1em 0.7em;
 }
 
 .nav-link {
@@ -42,39 +64,41 @@ Panel Styles Wishlist:
   border: none;
 }
 
-/* 
-  .Mui Overrides
-
-  Not sure if they'll stay here, but because I do themeing through css - it might
-*/
-
-.MuiMenu-paper {
-  background-color: var(--white-ter);
+.palette-dropdown {
+  position: relative;
+  top: 5px;
 }
-
-.MuiMenuItem-root {
-  display: block;
-}
-
 /* 
 
   Panel Colors
 
 */
-.gruvbox {
+.disc-gruvbox {
   margin-left: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   border-radius: 50%;
   height: 2rem;
   width: 2rem;
   background-color: #d79921;
 }
 
-.booberry {
+.disc-booberry {
   margin-left: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   border-radius: 50%;
   height: 2rem;
   width: 2rem;
   background-color: #7139bf;
+}
+
+.disc-all-black-everything {
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  background-color: #000;
+}
+
+.waving-hand {
 }

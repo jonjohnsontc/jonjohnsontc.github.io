@@ -19,12 +19,13 @@ function PanelLink(props) {
     }
   }
 
+  let navClasses = "nav-link";
+  if (current === props.link) {
+    navClasses += " nav-link--active";
+  }
+
   return (
-    <Link
-      to={props.link}
-      className={current === props.link ? "nav-link--active" : "nav-link"}
-      onClick={props.onClick}
-    >
+    <Link to={props.link} className={navClasses} onClick={props.onClick}>
       {props.name}
     </Link>
   );
@@ -40,10 +41,11 @@ const changeBodyClass = className => {
 };
 
 function DropdownItem(props) {
+  const ddClass = `disc-${props.name.toLowerCase()}`;
   return (
     <MenuItem onClick={props.onClick}>
       <div>
-        <div className={props.background}>
+        <div className={ddClass}>
           <img />
         </div>
         <h2>{props.name}</h2>
@@ -75,18 +77,42 @@ function PaletteDropdown(props) {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
         transformOrigin={{ vertical: "top", horizontal: "left" }}
+        disableScrollLock={true}
+        MenuListProps={{ sx: { backgroundColor: "var(--white-ter)" } }}
+        PaperProps={{
+          elevation: 3,
+          sx: {
+            overflow: "visible", // necessary to see the 'arrow'
+            mt: 1.5,
+            "& .MuiAvatar-root": {
+              width: 32,
+              height: 32,
+              ml: -0.5,
+              mr: 1,
+            },
+            "&:before": {
+              content: '""',
+              display: "block",
+              position: "absolute",
+              top: 0,
+              left: "var(--arrow-offset)",
+              width: 10,
+              height: 10,
+              bgcolor: "var(--white-ter)",
+              transform: "translateY(-50%) rotate(45deg)",
+              zIndex: 0,
+              boxShadow:
+                "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);",
+            },
+          },
+        }}
       >
-        <DropdownItem
-          name="Gruvbox"
-          onClick={e => handleItemClick("", e)}
-          background={"gruvbox"}
-        />
+        <DropdownItem name="Gruvbox" onClick={e => handleItemClick("", e)} />
         <DropdownItem
           name="Booberry"
           onClick={e => handleItemClick("booberry", e)}
-          background={"booberry"}
         />
       </Menu>
     </div>
@@ -111,7 +137,7 @@ function Navbar() {
   return (
     <nav className="nav" role="navigation" aria-label="main-navigation">
       <ul>
-        <li>
+        <li id="waving-hand">
           <PanelLink name="👋🏽" link="/" onClick={toggleClass} />
         </li>
         <li>

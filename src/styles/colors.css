@@ -32,3 +32,17 @@ body.booberry {
   --grey-dark: hsl(0, 0%, 29%);
   --primary: var(--purple);
 }
+
+body.all-black-everything {
+  --white-ter: #000;
+  --white: #333333;
+  --turquoise: #000;
+  --green: #000;
+  --grey-darker: #000;
+  --cyan: #000;
+  --yellow: #000;
+  --purple: #000;
+  --red: #000;
+  --grey-dark: hsl(0, 0%, 29%);
+  --primary: var(--purple);
+}

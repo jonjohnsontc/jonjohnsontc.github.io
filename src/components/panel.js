@@ -126,7 +126,7 @@ function Navbar() {
 
 export default function Panel(props) {
   return (
-    <div className="app">
+    <div id="app" className="app">
       <Navbar />
       {props.children}
     </div>
