@@ -7,7 +7,6 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/ 
 */
-
 html {
   box-sizing: border-box;
 }
@@ -26,9 +25,10 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: "Noto Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
+
+  /* font-family: "Noto Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif; */
 }
 img,
 picture,
@@ -65,3 +65,19 @@ h6 {
     - Font sizes
     - etc, etc
 */
+
+:root {
+  font-size: calc(0.5em + 1vw);
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 0.875em;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 1.2em;
+  }
+}

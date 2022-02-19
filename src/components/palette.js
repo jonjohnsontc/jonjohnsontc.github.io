@@ -1,21 +1,30 @@
 import React from "react";
+/*
+  I'd like to change the fill of the palette based one of two scenarios:
+   - The theme changes
+   - The button that surrounds the palette in the newPanel.js is clicked
 
-export function Palette() {
+  - I'd like the Palette to also represent a range of colors, based on the theme
+    (e.g., each splotch in the color wheel/palette is different)
+*/
+export function Palette(props) {
   const changeTheme = React.useCallback(() => {
     if (typeof document !== "undefined") {
       if (document.body.className === "") {
-        return "#d3869b"
+        return "#d3869b";
       } else {
-        return "#7139bf"
-  }} else {
-    return "#d3869b"
-  }}, [])
-  
+        return "#7139bf";
+      }
+    } else {
+      return "#d3869b";
+    }
+  }, []);
+
   const svg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="40"
-      height="40"
+      width={props.size || "40"}
+      height={props.size || "40"}
       fill={changeTheme()}
       className="bi"
       viewBox="0 0 16 16"

@@ -20,14 +20,15 @@ body {
 }
 
 body.booberry {
-  --white-ter: #fbf1c7;
-  --white: #f9f5d7;
-  --turquoise: #458588;
-  --green: #98971a;
-  --grey-darker: #504945;
-  --cyan: #076678;
-  --yellow: #d79921;
-  --purple: #b16286;
-  --red: #cc241d;
+  --white-ter: #f2f2f2;
+  --white: hsl(0, 0, 100%);
+  --turquoise: #5ea4bc;
+  --green: #888c03;
+  --grey-darker: #7139bf;
+  --cyan: #0468bf;
+  --yellow: #bfa017;
+  --purple: #7139bf;
+  --red: #f2275d;
   --grey-dark: hsl(0, 0%, 29%);
+  --primary: var(--purple);
 }

@@ -11,9 +11,18 @@ Panel Styles Wishlist:
 
 .nav {
   display: inline-flex;
+  min-width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav > ul > li {
+  display: inline-flex;
+  padding: 1em 1em;
 }
 
 .nav-link {
+  font-size: 2.25rem;
   color: var(--primary);
 }
 
@@ -21,8 +30,51 @@ Panel Styles Wishlist:
   color: var(--red);
 }
 
-.nav-active-link {
+.nav-link--active {
   text-underline-offset: 0.3em;
   text-decoration: underline;
   color: var(--red);
+}
+
+.nav-button {
+  cursor: pointer;
+  background-color: var(--white-ter);
+  border: none;
+}
+
+/* 
+  .Mui Overrides
+
+  Not sure if they'll stay here, but because I do themeing through css - it might
+*/
+
+.MuiMenu-paper {
+  background-color: var(--white-ter);
+}
+
+.MuiMenuItem-root {
+  display: block;
+}
+
+/* 
+
+  Panel Colors
+
+*/
+.gruvbox {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  background-color: #d79921;
+}
+
+.booberry {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  background-color: #7139bf;
 }
