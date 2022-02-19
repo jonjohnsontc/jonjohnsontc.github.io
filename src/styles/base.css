@@ -1,0 +1,83 @@
+/* 
+  Base styles - no class names/IDs  
+
+
+
+  Much of this is sourced/taken from 
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/ 
+*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
+  /* font-family: "Noto Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif; */
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 
+  TODO: We wanna set a bunch more of our defaults here
+    - Forms, Tables, Lists styles
+    - Colors?
+    - Font sizes
+    - etc, etc
+*/
+
+:root {
+  font-size: calc(0.5em + 1vw);
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 0.875em;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 1.2em;
+  }
+}
