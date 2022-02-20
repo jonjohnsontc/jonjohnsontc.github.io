@@ -18,12 +18,10 @@ function PanelLink(props) {
       current = window.location.pathname;
     }
   }
-
   let navClasses = "nav-link";
   if (current === props.link) {
     navClasses += " nav-link--active";
   }
-
   return (
     <Link to={props.link} className={navClasses} onClick={props.onClick}>
       {props.name}
@@ -80,7 +78,9 @@ function PaletteDropdown(props) {
         anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
         transformOrigin={{ vertical: "top", horizontal: "left" }}
         disableScrollLock={true}
-        MenuListProps={{ sx: { backgroundColor: "var(--white-ter)" } }}
+        MenuListProps={{
+          sx: { backgroundColor: "var(--white-ter)" },
+        }}
         PaperProps={{
           elevation: 3,
           sx: {

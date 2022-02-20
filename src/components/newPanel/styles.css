@@ -49,13 +49,13 @@ Panel Styles Wishlist:
 }
 
 .nav-link:hover {
-  color: var(--red);
+  color: var(--hover);
+  text-decoration: none;
 }
 
 .nav-link--active {
   text-underline-offset: 0.3em;
-  text-decoration: underline;
-  color: var(--red);
+  text-decoration: underline solid 0.05em;
 }
 
 .nav-button {
@@ -81,7 +81,6 @@ Panel Styles Wishlist:
   width: 2rem;
   background-color: #d79921;
 }
-
 .disc-booberry {
   margin-left: 1em;
   margin-bottom: 0.5em;
@@ -90,7 +89,7 @@ Panel Styles Wishlist:
   width: 2rem;
   background-color: #7139bf;
 }
-
+/* not currently using */
 .disc-all-black-everything {
   margin-left: 1em;
   margin-bottom: 0.5em;
@@ -98,7 +97,4 @@ Panel Styles Wishlist:
   height: 2rem;
   width: 2rem;
   background-color: #000;
-}
-
-.waving-hand {
 }
