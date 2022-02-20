@@ -17,6 +17,7 @@ body {
   --red: #cc241d;
   --grey-dark: hsl(0, 0%, 29%);
   --primary: var(--purple);
+  --hover: var(--turquoise);
 }
 
 body.booberry {
@@ -31,6 +32,7 @@ body.booberry {
   --red: #f2275d;
   --grey-dark: hsl(0, 0%, 29%);
   --primary: var(--purple);
+  --hover: var(--red);
 }
 
 body.all-black-everything {
