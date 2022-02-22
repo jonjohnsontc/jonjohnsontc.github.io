@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 function Greeting(props) {
   let greeting = props.greeting || "Hi, I'm Jon :0)";
 
-  return <p className={`title is-family has-text-centered`}>{greeting}</p>;
+  return <h1 className={`title has-text-centered`}>{greeting}</h1>;
 }
 
 function Bio() {

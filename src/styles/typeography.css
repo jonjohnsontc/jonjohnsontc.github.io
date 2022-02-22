@@ -1,0 +1,10 @@
+@import "./base.css";
+
+.text-title {
+  font-size: 4rem;
+}
+
+.text-header {
+  margin: none;
+  font-size: 3rem;
+}

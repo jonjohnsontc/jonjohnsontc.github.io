@@ -46,7 +46,7 @@ function DropdownItem(props) {
         <div className={ddClass}>
           <img />
         </div>
-        <h2>{props.name}</h2>
+        <p>{props.name}</p>
       </div>
     </MenuItem>
   );
