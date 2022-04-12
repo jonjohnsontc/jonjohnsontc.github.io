@@ -69,6 +69,12 @@ Panel Styles Wishlist:
   position: relative;
   top: 5px;
 }
+
+@media (max-width: 400px) {
+  .palette {
+    margin-bottom: 1em;
+  }
+}
 /* 
 
   Panel Colors
