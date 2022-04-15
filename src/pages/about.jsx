@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import Face from "../components/face";
 
@@ -6,6 +7,12 @@ import "../styles/components/container.css";
 import "../styles/components/infoblock.css";
 import "../styles/typeography.css";
 import "../styles/about.css";
+
+const title = (
+  <Helmet>
+    <title>About Me | Jon Johnson</title>
+  </Helmet>
+);
 
 function Resume() {
   return (
@@ -105,6 +112,7 @@ function Resume() {
 export default function About() {
   return (
     <div className="container-main">
+      {title}
       <article className="container-article">
         <Face />
         <h1 className="text-header">About Me</h1>

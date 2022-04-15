@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-stuff-index-js",
-    "path": "/stuff/",
-    "result": {"data":{"allMarkdownRemark":{"nodes":[{"frontmatter":{"title":"Check out My Posts on Medium","date":"2018-05-12","pic":"med-logo.svg","icon":"journal-bookmark.svg"},"html":"<p>Way way way back, I used to work in music. My time there mostly consisted of doing biz stuff on the periphery, but it was stuff I grew to love. I wrote a number of posts on Medium that highlighted a bunch of (I think) relatively obscure and interesting things in music. You can check them out <a href=\"https://medium.com/@JonJohnsonTC\">here</a></p>"},{"frontmatter":{"title":"Songwriter Graph","date":"2020-05-12","pic":"swg-logo.svg","icon":"component-2.png"},"html":"<p>The Songwriter Graph is an attempt of mine to map songwriters by how they sound in relation to one another. It's built on top of an Approximate Nearest Neighbors model, and for a songwriter, lists their 5 most similar songwriters. You can visit it <a href=\"https://www.songwritergraph.org\">here</a></p>"}]}},"pageContext":{}},
-    "staticQueryHashes": []}
