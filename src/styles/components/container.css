@@ -1,0 +1,14 @@
+.container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-article {
+  max-width: 60%;
+}
+
+.container-article > p,h1,h2,h3,h4,h5,h6 {
+  margin: 2em 0em;
+}

@@ -37,7 +37,7 @@ function Carousel(props) {
 
 const title = (
   <Helmet>
-    <title>Stuff I've Made | JonJ.io</title>
+    <title>Stuff I've Made | Jon Johnson</title>
   </Helmet>
 );
 

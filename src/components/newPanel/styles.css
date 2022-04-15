@@ -45,6 +45,7 @@ Panel Styles Wishlist:
 
 .nav-link {
   font-size: 2.25rem;
+  font-weight: 600;
   color: var(--primary);
 }
 
@@ -67,6 +68,12 @@ Panel Styles Wishlist:
 .palette-dropdown {
   position: relative;
   top: 5px;
+}
+
+@media (max-width: 400px) {
+  .palette {
+    margin-bottom: 1em;
+  }
 }
 /* 
 

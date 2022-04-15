@@ -1,0 +1,20 @@
+@import "./base.css";
+
+body {
+  --serif: "Noto Serif Display", serif;
+  --sans-serif: "Fira Sans", Helvetica, sans-serif;
+}
+
+.text-title {
+  font-size: 4rem;
+}
+
+.text-header {
+  margin: none;
+  font-size: 3rem;
+}
+
+.text-subheader {
+  font-size: 2rem;
+  margin: none;
+}
