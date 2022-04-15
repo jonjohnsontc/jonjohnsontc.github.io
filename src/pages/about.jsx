@@ -1,6 +1,6 @@
 import React from "react";
 
-import PlayerCard from "../components/playerCard";
+import Face from "../components/face";
 
 import "../styles/components/container.css";
 import "../styles/components/infoblock.css";
@@ -106,6 +106,7 @@ export default function About() {
   return (
     <div className="container-main">
       <article className="container-article">
+        <Face />
         <h1 className="text-header">About Me</h1>
         <p>
           My name is Jon Johnson. I'm a cat father, developer, and complete and
