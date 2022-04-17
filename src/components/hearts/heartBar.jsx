@@ -17,23 +17,11 @@ export default function HeartBar(props) {
 
   return (
     <svg className="bi" height={32}>
-      <use xlinkHref={`./bootstrap-icons.svg${hearts[compareTo(level, 20)]}`} />
-      <use
-        xlinkHref={`./bootstrap-icons.svg${hearts[compareTo(level, 40)]}`}
-        x={18}
-      />
-      <use
-        xlinkHref={`./bootstrap-icons.svg${hearts[compareTo(level, 60)]}`}
-        x={36}
-      />
-      <use
-        xlinkHref={`./bootstrap-icons.svg${hearts[compareTo(level, 80)]}`}
-        x={54}
-      />
-      <use
-        xlinkHref={`./bootstrap-icons.svg${hearts[compareTo(level, 100)]}`}
-        x={72}
-      />
+      <use xlinkHref={`./icons.svg${hearts[compareTo(level, 20)]}`} />
+      <use xlinkHref={`./icons.svg${hearts[compareTo(level, 40)]}`} x={18} />
+      <use xlinkHref={`./icons.svg${hearts[compareTo(level, 60)]}`} x={36} />
+      <use xlinkHref={`./icons.svg${hearts[compareTo(level, 80)]}`} x={54} />
+      <use xlinkHref={`./icons.svg${hearts[compareTo(level, 100)]}`} x={72} />
     </svg>
   );
 }
