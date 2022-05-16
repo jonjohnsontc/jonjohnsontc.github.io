@@ -53,11 +53,10 @@ export default function CircleArc({ cX, cY, rX, rY, t1, rot, sweep }: Props) {
   const fS = sweep > 0 ? 1 : 0;
   return (
     <>
-      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <svg xmlns="http://www.w3.org/2000/svg">
         <path
           className="arc"
           fill="none"
-          stroke="black"
           d={`M ${sX} ${sY} A ${[
             rX,
             rY,

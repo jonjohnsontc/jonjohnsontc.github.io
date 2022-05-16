@@ -2,4 +2,5 @@
 
 .arc {
   stroke: var(--primary);
+  stroke-width: 0.5em;
 }

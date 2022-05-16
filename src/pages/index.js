@@ -32,7 +32,7 @@ export default function Home() {
         belowHeadline={<Bio />}
         prompt={<Greeting />}
       />
-      <CircleStat value={90} />
+      <CircleStat value={100} />
     </>
   );
 }

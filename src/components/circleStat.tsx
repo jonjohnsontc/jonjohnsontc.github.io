@@ -1,6 +1,8 @@
 import React from "react";
 import CircleArc from "./circleArc";
 
+import "../styles/components/circlestat.css";
+
 type Props = {
   value: number;
 };
@@ -9,16 +11,9 @@ export default function CircleStat({ value }: Props) {
   let shape: JSX.Element;
   if (value === 100) {
     shape = (
-      <svg
-        className="circle-stat"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 300 300"
-      >
+      <svg className="donut-stat" xmlns="http://www.w3.org/2000/svg">
         {/* donut circle */}
-        <circle className="donut" />
-
-        {/* transparent circle */}
-        <circle />
+        <circle className="donut" r={50} cx={60} cy={80} />
       </svg>
     );
   } else {
@@ -27,8 +22,8 @@ export default function CircleStat({ value }: Props) {
     shape = (
       <CircleArc
         className="circle-stat"
-        cX={150}
-        cY={150}
+        cX={100}
+        cY={60}
         rX={50}
         rY={50}
         rot={rot}
@@ -40,7 +35,7 @@ export default function CircleStat({ value }: Props) {
 
   return (
     <>
-      <p className="circle-stat">{value}</p>
+      <p className="circle-stat-val">{value}</p>
       {shape}
     </>
   );
