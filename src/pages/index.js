@@ -3,7 +3,7 @@ import { Splash } from "../components/page";
 import Logo from "../components/logo";
 import { Helmet } from "react-helmet";
 
-import CircleArc from "../components/circleArc";
+import CircleStat from "../components/circleStat";
 
 function Greeting(props) {
   let greeting = props.greeting || "Hi, I'm Jon :0)";
@@ -32,15 +32,7 @@ export default function Home() {
         belowHeadline={<Bio />}
         prompt={<Greeting />}
       />
-      <CircleArc
-        cX={100}
-        cY={100}
-        rX={50}
-        rY={50}
-        t1={0}
-        rot={300}
-        sweep={358}
-      />
+      <CircleStat value={90} />
     </>
   );
 }

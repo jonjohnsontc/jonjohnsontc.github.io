@@ -15,6 +15,7 @@ type Props = {
   rot: number;
   // length of line (max 358)
   sweep: number;
+  className: string;
 };
 
 // Design 'inspiration' (i stole it and made it a React component)
@@ -52,7 +53,6 @@ export default function CircleArc({ cX, cY, rX, rY, t1, rot, sweep }: Props) {
   const fS = sweep > 0 ? 1 : 0;
   return (
     <>
-      <p className="stat">100</p>
       <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
         <path
           className="arc"
