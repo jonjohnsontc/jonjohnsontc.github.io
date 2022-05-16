@@ -32,7 +32,6 @@ export default function Logo(props) {
         viewBox="0 0 209 209"
       >
         <g filter="url(#filter0_d)">
-          
           {/* TODO: I'm no longer using the circle. I should probably delete it */}
           <circle cx="104.5" cy="100.5" r="100.5"></circle>
         </g>
