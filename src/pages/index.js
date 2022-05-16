@@ -2,6 +2,7 @@ import React from "react";
 import { Splash } from "../components/page";
 import Logo from "../components/logo";
 import { Helmet } from "react-helmet";
+
 import CircleArc from "../components/circleArc";
 
 function Greeting(props) {
@@ -30,6 +31,15 @@ export default function Home() {
         logo={<Logo width="300" height="300" />}
         belowHeadline={<Bio />}
         prompt={<Greeting />}
+      />
+      <CircleArc
+        cX={100}
+        cY={100}
+        rX={50}
+        rY={50}
+        t1={0}
+        rot={300}
+        sweep={358}
       />
     </>
   );
